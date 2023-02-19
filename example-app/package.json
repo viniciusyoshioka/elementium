@@ -1,0 +1,25 @@
+{
+    "name": "elementiumexample",
+    "version": "0.0.1",
+    "private": true,
+    "license": "MIT",
+    "scripts": {
+        "start": "react-native start",
+        "android": "react-native run-android --active-arch-only",
+        "ios": "react-native run-ios"
+    },
+    "dependencies": {
+        "react": "18.2.0",
+        "react-native": "0.71.3"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.20.0",
+        "@babel/preset-env": "^7.20.0",
+        "@babel/runtime": "^7.20.0",
+        "@types/react": "^18.0.24",
+        "babel-plugin-module-resolver": "^5.0.0",
+        "babel-plugin-transform-remove-console": "^6.9.4",
+        "metro-react-native-babel-preset": "0.73.7",
+        "typescript": "4.8.4"
+    }
+}

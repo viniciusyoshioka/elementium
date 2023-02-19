@@ -1,0 +1,52 @@
+{
+    "name": "@elementium/native",
+    "description": "Library to build interfaces for React Native",
+    "version": "0.0.1",
+    "license": "MIT",
+    "main": "lib/commonjs/index.js",
+    "module": "lib/module/index.js",
+    "types": "lib/typescript/src/index.d.ts",
+    "source": "src/index.tsx",
+    "react-native": "src/index.tsx",
+    "files": [
+        "lib/",
+        "src/"
+    ],
+    "scripts": {
+        "prepack": "bob build"
+    },
+    "peerDependencies": {
+        "react": "*",
+        "react-native": "*"
+    },
+    "devDependencies": {
+        "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
+        "@types/react": "^18.0.28",
+        "babel-plugin-transform-remove-console": "^6.9.4",
+        "metro-react-native-babel-preset": "^0.75.0",
+        "react": "18.2.0",
+        "react-native": "0.71.3",
+        "react-native-builder-bob": "^0.20.3",
+        "typescript": "^4.9.5"
+    },
+    "react-native-builder-bob": {
+        "source": "src",
+        "output": "lib",
+        "targets": [
+            [
+                "commonjs",
+                {
+                    "configFile": true,
+                    "babelrc": true
+                }
+            ],
+            "module",
+            [
+                "typescript",
+                {
+                    "project": "tsconfig.build.json"
+                }
+            ]
+        ]
+    }
+}

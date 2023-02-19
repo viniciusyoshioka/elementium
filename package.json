@@ -1,0 +1,16 @@
+{
+    "description": "Library to build interfaces",
+    "license": "MIT",
+    "private": true,
+    "workspaces": {
+        "packages": [
+            "packages/*"
+        ]
+    },
+    "scripts": {
+        "example-app": "yarn --cwd example-app",
+        "bootstrap": "yarn && yarn example-app",
+        "typecheck": "tsc --noEmit --composite false",
+        "lint": "eslint '**/*.{js,ts,tsx}'"
+    }
+}
