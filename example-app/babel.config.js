@@ -12,7 +12,10 @@ const workspaces = fs
     )
 
 // Get the aliases for packages `source` field in their `package.json`
-const aliases = {}
+const aliases = {
+    "@router": "./src/router",
+    "@screens": "./src/screens",
+}
 workspaces.forEach((it) => {
     const pak = JSON.parse(
         fs.readFileSync(path.join(it, "package.json"), "utf8")

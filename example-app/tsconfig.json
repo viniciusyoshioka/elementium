@@ -3,4 +3,12 @@
     "references": [
         {"path": "../packages/native"},
     ],
+    "compilerOptions": {
+        "paths": {
+            "@router": ["./example-app/src/router"],
+            "@router/*": ["./example-app/src/router/*"],
+            "@screens": ["./example-app/src/screens"],
+            "@screens/*": ["./example-app/src/screens/*"],
+        },
+    },
 }
