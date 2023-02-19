@@ -6,6 +6,8 @@
     "compilerOptions": {
         "paths": {
             "@elementium/*": ["./packages/*/src"],
+            "@hooks": ["./example-app/src/hooks"],
+            "@hooks/*": ["./example-app/src/hooks/*"],
             "@router": ["./example-app/src/router"],
             "@router/*": ["./example-app/src/router/*"],
             "@screens": ["./example-app/src/screens"],
