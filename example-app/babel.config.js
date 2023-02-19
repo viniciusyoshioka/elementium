@@ -13,6 +13,7 @@ const workspaces = fs
 
 // Get the aliases for packages `source` field in their `package.json`
 const aliases = {
+    "@hooks": "./src/hooks",
     "@router": "./src/router",
     "@screens": "./src/screens",
 }
