@@ -30,5 +30,6 @@ module.exports = {
                 alias: aliases,
             },
         ],
+        "react-native-reanimated/plugin",
     ],
 }
