@@ -1,3 +1,8 @@
+import { Router } from "@router"
+
+
 export function App() {
-    return null
+    return (
+        <Router />
+    )
 }
