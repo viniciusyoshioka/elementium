@@ -1,0 +1,16 @@
+{
+    "name": "@elementium/eslint-config-react",
+    "description": "Eslint config to be used with React and React Native",
+    "version": "0.0.1",
+    "license": "MIT",
+    "main": "index.js",
+    "files": [
+        "index.js"
+    ],
+    "peerDependencies": {
+        "eslint": "*"
+    },
+    "devDependencies": {
+        "eslint": "^8.34.0"
+    }
+}
