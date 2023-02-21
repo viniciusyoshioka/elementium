@@ -3,9 +3,9 @@
     "description": "Eslint config to be used with Typescript, React and React Native",
     "version": "0.0.1",
     "license": "MIT",
-    "main": "index.js",
+    "main": ".eslintrc.json",
     "files": [
-        "index.js"
+        ".eslintrc.json"
     ],
     "peerDependencies": {
         "@typescript-eslint/eslint-plugin": "*",
