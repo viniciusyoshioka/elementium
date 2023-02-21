@@ -4,18 +4,12 @@
 
 To install the package, download it, and then run:
 
-```sh
-npm add -D file:../elementium/packages/eslint-config-react-typescript
-# or
-yarn add -D file:../elementium/packages/eslint-config-react-typescript
-```
-
-Also, you have to install other libraries this package requires:
+- Note that this package requires `eslint`, `@typescript-eslint/eslint-plugin` and `@typescript-eslint/parser`
 
 ```sh
-npm add -D eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser
+npm install --save-dev file:../elementium/packages/eslint-config-react-typescript eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser
 # or
-yarn add -D eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser
+yarn add -D file:../elementium/packages/eslint-config-react-typescript eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser
 ```
 
 ## Usage

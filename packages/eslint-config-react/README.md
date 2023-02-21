@@ -4,18 +4,12 @@
 
 To install the package, download it, and then run:
 
-```sh
-npm add -D file:../elementium/packages/eslint-config-react
-# or
-yarn add -D file:../elementium/packages/eslint-config-react
-```
-
-Also, you have to install another library this package requires:
+- Note that this package requires `eslint`
 
 ```sh
-npm add -D eslint
+npm install --save-dev file:../elementium/packages/eslint-config-react eslint
 # or
-yarn add -D eslint
+yarn add -D file:../elementium/packages/eslint-config-react eslint
 ```
 
 ## Usage
