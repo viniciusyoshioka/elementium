@@ -21,7 +21,9 @@ workspaces.forEach((it) => {
     const pak = JSON.parse(
         fs.readFileSync(path.join(it, "package.json"), "utf8")
     )
-    aliases[pak.name] = path.join(it, pak.source)
+    if (pak.source) {
+        aliases[pak.name] = path.join(it, pak.source)
+    }
 })
 
 module.exports = {
