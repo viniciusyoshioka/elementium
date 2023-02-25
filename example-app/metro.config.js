@@ -42,15 +42,12 @@ module.exports = {
             .concat(...workspaces.map((it) => modules.map((m) =>
                 new RegExp(`^${escape(path.join(it, "node_modules", m))}\\/.*$`)
             )))
-            .concat(...modules.map((m) =>
-                new RegExp(`^${escape(path.join(root, "node_modules", m))}\\/.*$`)
-            ))
         ),
 
         // When we import a package from the monorepo, metro won't be able to find their deps
         // We need to specify them in `extraNodeModules` to tell metro where to find them
         extraNodeModules: modules.reduce((acc, name) => {
-            acc[name] = path.join(__dirname, "node_modules", name)
+            acc[name] = path.join(root, "node_modules", name)
             return acc
         }, {}),
     },
