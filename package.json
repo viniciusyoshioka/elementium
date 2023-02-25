@@ -9,10 +9,9 @@
         ]
     },
     "scripts": {
-        "example-app": "yarn --cwd example-app",
-        "bootstrap": "yarn && yarn example-app",
         "typecheck": "tsc --noEmit --composite false",
         "lint": "eslint '**/*.{js,ts,tsx}'",
+        "example-app": "yarn workspace @elementium/example-app",
         "eslint-config-react": "yarn workspace @elementium/eslint-config-react",
         "eslint-config-react-typescript": "yarn workspace @elementium/eslint-config-react-typescript",
         "native": "yarn workspace @elementium/native",
