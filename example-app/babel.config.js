@@ -6,8 +6,8 @@ const packages = path.resolve(__dirname, "..", "packages")
 // List all packages under `packages/`
 const workspaces = fs
     .readdirSync(packages)
-    .map((p) => path.join(packages, p))
-    .filter((p) => fs.statSync(p).isDirectory()
+    .map(p => path.join(packages, p))
+    .filter(p => fs.statSync(p).isDirectory()
         && fs.existsSync(path.join(p, "package.json"))
     )
 
@@ -18,7 +18,7 @@ const aliases = {
     "@screens": "./src/screens",
     "@theme": "./src/theme",
 }
-workspaces.forEach((it) => {
+workspaces.forEach(it => {
     const pak = JSON.parse(
         fs.readFileSync(path.join(it, "package.json"), "utf8")
     )

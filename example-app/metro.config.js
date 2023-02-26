@@ -9,14 +9,14 @@ const packages = path.resolve(root, "packages")
 // List all packages under `packages/`
 const workspaces = fs
     .readdirSync(packages)
-    .map((p) => path.join(packages, p))
-    .filter((p) => fs.statSync(p).isDirectory()
+    .map(p => path.join(packages, p))
+    .filter(p => fs.statSync(p).isDirectory()
         && fs.existsSync(path.join(p, "package.json"))
     )
 
 // Get the list of dependencies for all packages in the monorepo
 const modules = []
-    .concat(...workspaces.map((it) => {
+    .concat(...workspaces.map(it => {
         const pak = JSON.parse(
             fs.readFileSync(path.join(it, "package.json"), "utf8")
         )
@@ -39,7 +39,7 @@ module.exports = {
     // So we blacklist them at the root, and alias them to the versions in example's node_modules
     resolver: {
         blacklistRE: exclusionList([]
-            .concat(...workspaces.map((it) => modules.map((m) =>
+            .concat(...workspaces.map(it => modules.map(m =>
                 new RegExp(`^${escape(path.join(it, "node_modules", m))}\\/.*$`)
             )))
         ),
