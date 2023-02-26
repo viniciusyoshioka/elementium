@@ -12,6 +12,8 @@
             "@router/*": ["./example-app/src/router/*"],
             "@screens": ["./example-app/src/screens"],
             "@screens/*": ["./example-app/src/screens/*"],
+            "@theme": ["./example-app/src/theme"],
+            "@theme/*": ["./example-app/src/theme/*"],
         },
     },
 }

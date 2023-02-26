@@ -16,6 +16,7 @@ const aliases = {
     "@hooks": "./src/hooks",
     "@router": "./src/router",
     "@screens": "./src/screens",
+    "@theme": "./src/theme",
 }
 workspaces.forEach((it) => {
     const pak = JSON.parse(
