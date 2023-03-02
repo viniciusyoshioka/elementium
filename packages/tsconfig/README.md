@@ -16,6 +16,6 @@ In your `tsconfig.json` file, extends this package:
 
 ```json
 {
-    "extends": "@elementium/tsconfig"
+    "extends": "@elementium/tsconfig/tsconfig.json"
 }
 ```
