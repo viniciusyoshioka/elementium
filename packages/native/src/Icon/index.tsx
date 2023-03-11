@@ -19,6 +19,19 @@ export interface IconProps extends LibIconProps {
 }
 
 
+export interface ExtendableIconProps extends TextProps {
+    iconName: string;
+    iconSize?: number;
+    iconColor?: string;
+    iconGroup?: IconGroup;
+}
+
+
+export interface ExtendableOptionalIconProps extends Omit<ExtendableIconProps, "iconName"> {
+    iconName?: string;
+}
+
+
 function getComponent(group: IconGroup) {
     switch (group) {
         case "material":
