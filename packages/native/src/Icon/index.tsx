@@ -41,6 +41,7 @@ function getComponent(group: IconGroup) {
         case "ionicons":
             return Ionicons
         default:
+            console.warn(`Invalid icon group: "${group}". Using "material" as default.`)
             return Material
     }
 }
