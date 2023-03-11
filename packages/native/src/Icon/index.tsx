@@ -1,4 +1,4 @@
-import type { TextProps } from "react-native"
+import { ColorValue, TextProps } from "react-native"
 import Ionicons from "react-native-vector-icons/Ionicons"
 import MaterialCommunity from "react-native-vector-icons/MaterialCommunityIcons"
 import Material from "react-native-vector-icons/MaterialIcons"
@@ -10,7 +10,7 @@ export type IconGroup = "material" | "material-community" | "ionicons"
 export interface LibIconProps extends TextProps {
     name: string;
     size?: number;
-    color?: string;
+    color?: string | ColorValue;
 }
 
 
@@ -22,7 +22,7 @@ export interface IconProps extends LibIconProps {
 export interface ExtendableIconProps extends TextProps {
     iconName: string;
     iconSize?: number;
-    iconColor?: string;
+    iconColor?: string | ColorValue;
     iconGroup?: IconGroup;
 }
 
@@ -48,7 +48,7 @@ function getComponent(group: IconGroup) {
 
 const defaultIconGroup: IconGroup = "material"
 const defaultIconSize = 24
-const defaultIconColor = "black"
+const defaultIconColor: string | ColorValue = "black"
 
 
 export function Icon(props: IconProps) {
