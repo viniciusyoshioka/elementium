@@ -13,7 +13,7 @@
         "lint": "eslint '**/*.{js,ts,tsx}'",
         "example-app": "yarn workspace @elementium/example-app",
         "eslint-config": "yarn workspace @elementium/eslint-config",
-        "eslint-config-react-typescript": "yarn workspace @elementium/eslint-config-react-typescript",
+        "eslint-config-typescript": "yarn workspace @elementium/eslint-config-typescript",
         "native": "yarn workspace @elementium/native",
         "tsconfig": "yarn workspace @elementium/tsconfig"
     }

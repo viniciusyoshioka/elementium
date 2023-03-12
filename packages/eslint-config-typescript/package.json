@@ -1,6 +1,6 @@
 {
-    "name": "@elementium/eslint-config-react-typescript",
-    "description": "Eslint config to be used with Typescript, React and React Native",
+    "name": "@elementium/eslint-config-typescript",
+    "description": "Eslint config to be used with TS. (Supports React and React Native)",
     "version": "0.0.1",
     "license": "MIT",
     "main": ".eslintrc.json",
