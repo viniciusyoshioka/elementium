@@ -1,6 +1,6 @@
 {
     "extends": [
-        "@elementium/eslint-config-react",
-        "@elementium/eslint-config-react-typescript"
+        "@elementium/eslint-config",
+        "@elementium/eslint-config-typescript"
     ]
 }
