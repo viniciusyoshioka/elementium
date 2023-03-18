@@ -1,0 +1,10 @@
+{
+    "extends": "./tsconfig-base.json",
+    "compilerOptions": {
+        "outDir": "lib",
+        "emitDeclarationOnly": true,
+        "declaration": true,
+        "declarationDir": "lib/typescript",
+        "declarationMap": true,
+    },
+}
