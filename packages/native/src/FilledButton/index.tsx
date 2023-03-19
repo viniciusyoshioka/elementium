@@ -23,9 +23,6 @@ export interface FilledButtonProps extends
 }
 
 
-const defaultBackgroundColor = "teal"
-
-
 // TODO add ripple effect
 // TODO add animation for color change
 // TODO add hover state
@@ -36,7 +33,7 @@ export function FilledButton(props: FilledButtonProps) {
     const themeScheme = useThemeScheme()
 
     const backgroundColor = useMemo(() => (
-        props.style?.backgroundColor ?? defaultBackgroundColor
+        props.style?.backgroundColor ?? "teal"
     ), [props.style?.backgroundColor])
     const color = useMemo(() => {
         const themeContentColor = themeScheme === "dark" ? "white" : "black"
@@ -59,10 +56,15 @@ export function FilledButton(props: FilledButtonProps) {
     const buttonStyle: ViewStyle = useMemo(() => {
         const buttonPaddingLeft = props.iconName ? 16 : 24
         const buttonPaddingRight = props.iconName ? 24 : 24
-        const defaultButtonStyle: ViewStyle = {
+        return {
             ...styles.container,
             paddingLeft: buttonPaddingLeft,
             paddingRight: buttonPaddingRight,
+        }
+    }, [props.iconName])
+
+    const buttonColorStyle: ViewStyle = useMemo(() => {
+        const colorStyle: ViewStyle = {
             backgroundColor: backgroundColor,
         }
 
@@ -71,18 +73,18 @@ export function FilledButton(props: FilledButtonProps) {
                 .setA(tokens.stateOpacity.container.disabled)
                 .toRgba()
 
-            defaultButtonStyle.backgroundColor = disabledBackgroundColor
+            colorStyle.backgroundColor = disabledBackgroundColor
         } else if (interactionState === "pressed") {
             const currentBackgroundColor = new Color(backgroundColor as string)
             const overlayColor = new Color(contentColor as string).setA(tokens.stateOpacity.container.hover)
             const newBackgroundColor = Prisma.addColors(currentBackgroundColor, overlayColor).toRgba()
 
-            defaultButtonStyle.backgroundColor = newBackgroundColor
-            defaultButtonStyle.elevation = tokens.elevation.level0
+            colorStyle.backgroundColor = newBackgroundColor
+            colorStyle.elevation = tokens.elevation.level0
         }
 
-        return defaultButtonStyle
-    }, [props.iconName, backgroundColor, props.disabled, themeScheme, interactionState, contentColor])
+        return colorStyle
+    }, [backgroundColor, props.disabled, themeScheme, interactionState, contentColor])
 
 
     const ButtonIcon = useCallback(() => {
@@ -117,7 +119,7 @@ export function FilledButton(props: FilledButtonProps) {
         <TouchableOpacity
             activeOpacity={1}
             {...props}
-            style={[buttonStyle, props.style]}
+            style={[buttonStyle, props.style, buttonColorStyle]}
             onPressIn={onPressIn}
             onPressOut={onPressOut}
         >
