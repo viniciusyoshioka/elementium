@@ -23,9 +23,6 @@ export interface TextButtonProps extends
 }
 
 
-const defaultColor = "teal"
-
-
 // TODO add ripple effect
 // TODO add animation for color change
 // TODO add hover state
@@ -35,7 +32,7 @@ export function TextButton(props: TextButtonProps) {
 
     const themeScheme = useThemeScheme()
 
-    const color = useMemo(() => props.style?.color ?? defaultColor, [props.style?.color])
+    const color = useMemo(() => props.style?.color ?? "teal", [props.style?.color])
 
     const [interactionState, setInteractionState] = useState<InteractionStateToken>("enabled")
 
@@ -53,21 +50,28 @@ export function TextButton(props: TextButtonProps) {
     const buttonStyle: ViewStyle = useMemo(() => {
         const buttonPaddingLeft = props.iconName ? 12 : 12
         const buttonPaddingRight = props.iconName ? 16 : 12
-        const defaultButtonStyle: ViewStyle = {
+        return {
             ...styles.container,
             paddingLeft: buttonPaddingLeft,
             paddingRight: buttonPaddingRight,
+        }
+    }, [props.iconName])
+
+    const buttonColorStyle: ViewStyle = useMemo(() => {
+        const colorStyle: ViewStyle = {
+            backgroundColor: "transparent",
         }
 
         if (interactionState === "pressed") {
             const pressedBackgroundColor = new Color(contentColor as string)
                 .setA(tokens.stateOpacity.container.pressed)
                 .toRgba()
-            defaultButtonStyle.backgroundColor = pressedBackgroundColor
+
+            colorStyle.backgroundColor = pressedBackgroundColor
         }
 
-        return defaultButtonStyle
-    }, [props.iconName, interactionState, contentColor])
+        return colorStyle
+    }, [interactionState, contentColor])
 
 
     const ButtonIcon = useCallback(() => {
@@ -102,7 +106,7 @@ export function TextButton(props: TextButtonProps) {
         <TouchableOpacity
             activeOpacity={1}
             {...props}
-            style={[buttonStyle, props.style]}
+            style={[buttonStyle, props.style, buttonColorStyle]}
             onPressIn={onPressIn}
             onPressOut={onPressOut}
         >
