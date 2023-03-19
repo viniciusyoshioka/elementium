@@ -144,6 +144,7 @@ export const ALL_CSS_COLORS: CssColorMap = {
     teal: "#008080",
     thistle: "#d8bfd8",
     tomato: "#ff6347",
+    transparent: "#00000000",
     turquoise: "#40e0d0",
     violet: "#ee82ee",
     wheat: "#f5deb3",
