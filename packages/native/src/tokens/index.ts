@@ -78,7 +78,7 @@ export const tokens: Tokens = {
             surfaceVariant: "transparent",
             onSurfaceVariant: "transparent",
 
-            outline: "transparent",
+            outline: "#79747E",
             outlineVariant: "transparent",
 
             error: "transparent",
@@ -101,7 +101,7 @@ export const tokens: Tokens = {
             surfaceVariant: "transparent",
             onSurfaceVariant: "transparent",
 
-            outline: "transparent",
+            outline: "#938F99",
             outlineVariant: "transparent",
 
             error: "transparent",
