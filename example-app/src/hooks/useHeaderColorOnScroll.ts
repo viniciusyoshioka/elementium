@@ -28,7 +28,6 @@ export function useHeaderColorOnScroll(inputRange: number[], outputRange: string
     useAnimatedReaction(
         () => scrollY.value,
         current => {
-            if (current > inputRange[1]) return
             runOnJS(updateHeaderColor)(current)
         }
     )
