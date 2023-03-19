@@ -170,25 +170,25 @@ export function ButtonScreen() {
 
                 <TextButton
                     text={"Olá, mundo!"}
-                    style={{ marginTop: 16, color: "teal" }}
+                    style={{ marginTop: 16,color: color.primary }}
                 />
 
                 <TextButton
                     text={"Olá, mundo!"}
                     iconName={"add"}
-                    style={{ marginTop: 16, color: "teal" }}
+                    style={{ marginTop: 16,color: color.primary }}
                 />
 
                 <TextButton
                     text={"Olá, mundo!"}
-                    style={{ marginTop: 16, color: "teal" }}
+                    style={{ marginTop: 16,color: color.primary }}
                     disabled
                 />
 
                 <TextButton
                     text={"Olá, mundo!"}
                     iconName={"add"}
-                    style={{ marginTop: 16, color: "teal" }}
+                    style={{ marginTop: 16,color: color.primary }}
                     disabled
                 />
             </>
