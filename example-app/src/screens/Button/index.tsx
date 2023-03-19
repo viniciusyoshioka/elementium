@@ -1,4 +1,4 @@
-import { FilledButton, Text, TextButton } from "@elementium/native"
+import { FilledButton, OutlineButton, Text, TextButton } from "@elementium/native"
 import { ScrollView } from "react-native"
 
 import { useHeaderColorOnScroll } from "@hooks"
@@ -47,6 +47,99 @@ export function ButtonScreen() {
                     text={"Olá, mundo!"}
                     iconName={"add"}
                     style={{ marginTop: 16, color: "white" }}
+                    disabled
+                />
+            </>
+
+            <>
+                <Text
+                    variant={"title"}
+                    size={"large"}
+                    style={{ color: color.onBackground, width: "100%", marginTop: 32 }}
+                    children={"OutlineButton"}
+                />
+
+                <OutlineButton
+                    text={"Olá, mundo!"}
+                    style={{
+                        marginTop: 16,
+                        color: color.primary,
+                        borderColor: color.outline,
+                    }}
+                />
+
+                <OutlineButton
+                    text={"Olá, mundo!"}
+                    iconName={"add"}
+                    style={{
+                        marginTop: 16,
+                        color: color.primary,
+                        borderColor: color.outline,
+                    }}
+                />
+
+                <OutlineButton
+                    text={"Olá, mundo!"}
+                    style={{
+                        marginTop: 16,
+                        color: color.primary,
+                        borderColor: color.outline,
+                    }}
+                    disabled
+                />
+
+                <OutlineButton
+                    text={"Olá, mundo!"}
+                    iconName={"add"}
+                    style={{
+                        marginTop: 16,
+                        color: color.primary,
+                        borderColor: color.outline,
+                    }}
+                    disabled
+                />
+
+                <OutlineButton
+                    text={"Olá, mundo!"}
+                    style={{
+                        marginTop: 16,
+                        color: color.primary,
+                        borderColor: color.outline,
+                        backgroundColor: color.primaryContainer,
+                    }}
+                />
+
+                <OutlineButton
+                    text={"Olá, mundo!"}
+                    iconName={"add"}
+                    style={{
+                        marginTop: 16,
+                        color: color.primary,
+                        borderColor: color.outline,
+                        backgroundColor: color.primaryContainer,
+                    }}
+                />
+
+                <OutlineButton
+                    text={"Olá, mundo!"}
+                    style={{
+                        marginTop: 16,
+                        color: color.primary,
+                        borderColor: color.outline,
+                        backgroundColor: color.primaryContainer,
+                    }}
+                    disabled
+                />
+
+                <OutlineButton
+                    text={"Olá, mundo!"}
+                    iconName={"add"}
+                    style={{
+                        marginTop: 16,
+                        color: color.primary,
+                        borderColor: color.outline,
+                        backgroundColor: color.primaryContainer,
+                    }}
                     disabled
                 />
             </>
