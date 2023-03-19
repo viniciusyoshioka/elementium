@@ -26,6 +26,10 @@ export interface TextButtonProps extends
 const defaultColor = "teal"
 
 
+// TODO add ripple effect
+// TODO add animation for color change
+// TODO add hover state
+// TODO add focus state
 export function TextButton(props: TextButtonProps) {
 
 

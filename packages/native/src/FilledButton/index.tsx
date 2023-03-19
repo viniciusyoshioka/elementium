@@ -26,6 +26,10 @@ export interface FilledButtonProps extends
 const defaultBackgroundColor = "teal"
 
 
+// TODO add ripple effect
+// TODO add animation for color change
+// TODO add hover state
+// TODO add focus state
 export function FilledButton(props: FilledButtonProps) {
 
 
