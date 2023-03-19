@@ -13,7 +13,7 @@ export const DarkTheme: AppThemeType = {
         onSurface: "rgb(200, 200, 200)",
         surfaceVariant: "rgb(32, 32, 32)",
         onSurfaceVariant: "rgb(240, 240, 240)",
-        outline: "rgb(100, 100, 100)",
+        outline: "rgb(147, 143, 153)",
         outlineVariant: "rgb(180, 180, 180)",
 
         primary: "teal",

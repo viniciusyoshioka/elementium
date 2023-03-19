@@ -13,7 +13,7 @@ export const LightTheme: AppThemeType = {
         onSurface: "rgb(0, 0, 0)",
         surfaceVariant: "rgb(200, 200, 200)",
         onSurfaceVariant: "rgb(0, 0, 0)",
-        outline: "rgb(100, 100, 100)",
+        outline: "rgb(121, 116, 126)",
         outlineVariant: "rgb(180, 180, 180)",
 
         primary: "teal",
