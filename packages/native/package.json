@@ -1,6 +1,6 @@
 {
     "name": "@elementium/native",
-    "description": "Library to build interfaces for React Native",
+    "description": "Library with components to build interfaces for React Native",
     "version": "0.0.1",
     "license": "MIT",
     "main": "lib/commonjs/index.js",
