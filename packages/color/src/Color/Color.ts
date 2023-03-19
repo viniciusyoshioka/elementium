@@ -193,4 +193,25 @@ export class Color {
     getA(): number {
         return this.a
     }
+
+
+    setR(r: number) {
+        this.r = r
+        return this
+    }
+
+    setG(g: number) {
+        this.g = g
+        return this
+    }
+
+    setB(b: number) {
+        this.b = b
+        return this
+    }
+
+    setA(a: number) {
+        this.a = a
+        return this
+    }
 }
