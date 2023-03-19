@@ -1,5 +1,5 @@
 {
-    "description": "Library to build interfaces",
+    "description": "Repository to build interfaces and configure projects",
     "license": "MIT",
     "private": true,
     "workspaces": {
