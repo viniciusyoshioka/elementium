@@ -28,25 +28,41 @@ export function ButtonScreen() {
 
                 <FilledButton
                     text={"Olá, mundo!"}
-                    style={{ marginTop: 16, color: "white" }}
+                    style={{
+                        marginTop: 16,
+                        backgroundColor: color.primary,
+                        color: color.onPrimary,
+                    }}
                 />
 
                 <FilledButton
                     text={"Olá, mundo!"}
                     iconName={"add"}
-                    style={{ marginTop: 16, color: "white" }}
+                    style={{
+                        marginTop: 16,
+                        backgroundColor: color.primary,
+                        color: color.onPrimary,
+                    }}
                 />
 
                 <FilledButton
                     text={"Olá, mundo!"}
-                    style={{ marginTop: 16, color: "white" }}
+                    style={{
+                        marginTop: 16,
+                        backgroundColor: color.primary,
+                        color: color.onPrimary,
+                    }}
                     disabled
                 />
 
                 <FilledButton
                     text={"Olá, mundo!"}
                     iconName={"add"}
-                    style={{ marginTop: 16, color: "white" }}
+                    style={{
+                        marginTop: 16,
+                        backgroundColor: color.primary,
+                        color: color.onPrimary,
+                    }}
                     disabled
                 />
             </>
