@@ -1,4 +1,4 @@
-import { FilledButton, Text } from "@elementium/native"
+import { FilledButton, Text, TextButton } from "@elementium/native"
 import { ScrollView } from "react-native"
 
 import { useHeaderColorOnScroll } from "@hooks"
@@ -47,6 +47,39 @@ export function ButtonScreen() {
                     text={"Olá, mundo!"}
                     iconName={"add"}
                     style={{ marginTop: 16, color: "white" }}
+                    disabled
+                />
+            </>
+
+            <>
+                <Text
+                    variant={"title"}
+                    size={"large"}
+                    style={{ color: color.onBackground, width: "100%", marginTop: 32 }}
+                    children={"TextButton"}
+                />
+
+                <TextButton
+                    text={"Olá, mundo!"}
+                    style={{ marginTop: 16, color: "teal" }}
+                />
+
+                <TextButton
+                    text={"Olá, mundo!"}
+                    iconName={"add"}
+                    style={{ marginTop: 16, color: "teal" }}
+                />
+
+                <TextButton
+                    text={"Olá, mundo!"}
+                    style={{ marginTop: 16, color: "teal" }}
+                    disabled
+                />
+
+                <TextButton
+                    text={"Olá, mundo!"}
+                    iconName={"add"}
+                    style={{ marginTop: 16, color: "teal" }}
                     disabled
                 />
             </>
