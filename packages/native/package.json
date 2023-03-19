@@ -22,8 +22,8 @@
     },
     "devDependencies": {
         "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
-        "@elementium/eslint-config": "^0.0.1",
-        "@elementium/eslint-config-typescript": "^0.0.1",
+        "@elementium/eslint-config": "*",
+        "@elementium/eslint-config-typescript": "*",
         "@types/react": "^18.0.28",
         "@types/react-native-vector-icons": "^6.4.13",
         "@typescript-eslint/eslint-plugin": "^5.52.0",
