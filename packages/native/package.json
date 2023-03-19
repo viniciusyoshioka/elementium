@@ -16,12 +16,14 @@
         "prepack": "bob build"
     },
     "peerDependencies": {
+        "@elementium/color": "*",
         "react": "*",
         "react-native": "*",
         "react-native-vector-icons": "*"
     },
     "devDependencies": {
         "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
+        "@elementium/color": "*",
         "@elementium/eslint-config": "*",
         "@elementium/eslint-config-typescript": "*",
         "@types/react": "^18.0.28",
