@@ -24,6 +24,9 @@ export interface TextButtonProps extends
 }
 
 
+const defaultTextButtonColor: string | ColorValue = "teal"
+
+
 // TODO add ripple effect
 // TODO add animation for color change
 // TODO add hover state
@@ -34,7 +37,7 @@ export function TextButton(props: TextButtonProps) {
     const themeScheme = useThemeScheme()
 
     const style = useMemo(() => StyleSheet.flatten(props.style), [props.style])
-    const color = useMemo(() => style.color ?? "teal", [style.color])
+    const color = useMemo(() => style.color ?? defaultTextButtonColor, [style.color])
 
     const [interactionState, setInteractionState] = useState<InteractionStateToken>("enabled")
 

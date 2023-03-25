@@ -24,6 +24,9 @@ export interface FilledButtonProps extends
 }
 
 
+const defaultFilledButtonBackgroundColor: string | ColorValue = "teal"
+
+
 // TODO add ripple effect
 // TODO add animation for color change
 // TODO add hover state
@@ -35,7 +38,7 @@ export function FilledButton(props: FilledButtonProps) {
 
     const style = useMemo(() => StyleSheet.flatten(props.style), [props.style])
     const backgroundColor = useMemo(() => (
-        style.backgroundColor ?? "teal"
+        style.backgroundColor ?? defaultFilledButtonBackgroundColor
     ), [style.backgroundColor])
     const color = useMemo(() => {
         const themeContentColor = themeScheme === "dark" ? "white" : "black"

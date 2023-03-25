@@ -24,6 +24,10 @@ export interface OutlineButtonProps extends
 }
 
 
+const defaultOutlineButtonBackgroundColor: string | ColorValue = "transparent"
+const defaultOutlineButtonBorderColor: string | ColorValue = "gray"
+
+
 // TODO add ripple effect
 // TODO add animation for color change
 // TODO add hover state
@@ -35,10 +39,10 @@ export function OutlineButton(props: OutlineButtonProps) {
 
     const style = useMemo(() => StyleSheet.flatten(props.style), [props.style])
     const backgroundColor = useMemo(() => (
-        style.backgroundColor ?? "transparent"
+        style.backgroundColor ?? defaultOutlineButtonBackgroundColor
     ), [style.backgroundColor])
     const borderColor = useMemo(() => (
-        style.borderColor ?? "gray"
+        style.borderColor ?? defaultOutlineButtonBorderColor
     ), [style.borderColor])
     const color = useMemo(() => {
         const themeContentColor = themeScheme === "dark" ? "white" : "black"
