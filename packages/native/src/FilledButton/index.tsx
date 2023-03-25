@@ -24,7 +24,7 @@ export interface FilledButtonProps extends
 }
 
 
-const defaultFilledButtonBackgroundColor: string | ColorValue = "teal"
+export const defaultFilledButtonBackgroundColor: string | ColorValue = "teal"
 
 
 // TODO add ripple effect

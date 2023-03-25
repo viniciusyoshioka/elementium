@@ -47,9 +47,9 @@ function getComponent(group: IconGroup) {
 }
 
 
-const defaultIconGroup: IconGroup = "material"
-const defaultIconSize = 24
-const defaultIconColor: string | ColorValue = "black"
+export const defaultIconGroup: IconGroup = "material"
+export const defaultIconSize = 24
+export const defaultIconColor: string | ColorValue = "black"
 
 
 export function Icon(props: IconProps) {

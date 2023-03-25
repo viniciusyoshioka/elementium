@@ -24,8 +24,8 @@ export interface OutlineButtonProps extends
 }
 
 
-const defaultOutlineButtonBackgroundColor: string | ColorValue = "transparent"
-const defaultOutlineButtonBorderColor: string | ColorValue = "gray"
+export const defaultOutlineButtonBackgroundColor: string | ColorValue = "transparent"
+export const defaultOutlineButtonBorderColor: string | ColorValue = "gray"
 
 
 // TODO add ripple effect

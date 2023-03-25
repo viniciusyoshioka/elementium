@@ -24,7 +24,7 @@ export interface TextButtonProps extends
 }
 
 
-const defaultTextButtonColor: string | ColorValue = "teal"
+export const defaultTextButtonColor: string | ColorValue = "teal"
 
 
 // TODO add ripple effect
