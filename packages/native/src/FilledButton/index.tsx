@@ -3,6 +3,7 @@ import { useCallback, useMemo, useState } from "react"
 import {
     ColorValue,
     GestureResponderEvent,
+    StyleProp,
     StyleSheet,
     TextStyle,
     TouchableOpacity,
@@ -19,7 +20,7 @@ export interface FilledButtonProps extends
     Omit<TouchableOpacityProps, "style">
 {
     text: string;
-    style?: TextStyle;
+    style?: StyleProp<TextStyle>;
 }
 
 
@@ -32,13 +33,14 @@ export function FilledButton(props: FilledButtonProps) {
 
     const themeScheme = useThemeScheme()
 
+    const style = useMemo(() => StyleSheet.flatten(props.style), [props.style])
     const backgroundColor = useMemo(() => (
-        props.style?.backgroundColor ?? "teal"
-    ), [props.style?.backgroundColor])
+        style.backgroundColor ?? "teal"
+    ), [style.backgroundColor])
     const color = useMemo(() => {
         const themeContentColor = themeScheme === "dark" ? "white" : "black"
-        return props.style?.color ?? themeContentColor
-    }, [props.style?.color])
+        return style.color ?? themeContentColor
+    }, [style.color])
 
     const [interactionState, setInteractionState] = useState<InteractionStateToken>("enabled")
 
