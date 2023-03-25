@@ -3,6 +3,7 @@ import { useCallback, useMemo, useState } from "react"
 import {
     ColorValue,
     GestureResponderEvent,
+    StyleProp,
     StyleSheet,
     TextStyle,
     TouchableOpacity,
@@ -19,7 +20,7 @@ export interface TextButtonProps extends
     Omit<TouchableOpacityProps, "style">
 {
     text: string;
-    style?: TextStyle;
+    style?: StyleProp<TextStyle>;
 }
 
 
@@ -32,7 +33,8 @@ export function TextButton(props: TextButtonProps) {
 
     const themeScheme = useThemeScheme()
 
-    const color = useMemo(() => props.style?.color ?? "teal", [props.style?.color])
+    const style = useMemo(() => StyleSheet.flatten(props.style), [props.style])
+    const color = useMemo(() => style.color ?? "teal", [style.color])
 
     const [interactionState, setInteractionState] = useState<InteractionStateToken>("enabled")
 
