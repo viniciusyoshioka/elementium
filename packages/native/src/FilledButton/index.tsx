@@ -36,14 +36,9 @@ export function FilledButton(props: FilledButtonProps) {
 
     const themeScheme = useThemeScheme()
 
-    const style = useMemo(() => StyleSheet.flatten(props.style), [props.style])
-    const backgroundColor = useMemo(() => (
-        style.backgroundColor ?? defaultFilledButtonBackgroundColor
-    ), [style.backgroundColor])
-    const color = useMemo(() => {
-        const themeContentColor = themeScheme === "dark" ? "white" : "black"
-        return style.color ?? themeContentColor
-    }, [style.color])
+    const style = StyleSheet.flatten(props.style)
+    const backgroundColor = (style && style.backgroundColor) ?? defaultFilledButtonBackgroundColor
+    const color = (style && style.color) ?? (themeScheme === "dark" ? "white" : "black")
 
     const [interactionState, setInteractionState] = useState<InteractionStateToken>("enabled")
 

@@ -37,17 +37,10 @@ export function OutlineButton(props: OutlineButtonProps) {
 
     const themeScheme = useThemeScheme()
 
-    const style = useMemo(() => StyleSheet.flatten(props.style), [props.style])
-    const backgroundColor = useMemo(() => (
-        style.backgroundColor ?? defaultOutlineButtonBackgroundColor
-    ), [style.backgroundColor])
-    const borderColor = useMemo(() => (
-        style.borderColor ?? defaultOutlineButtonBorderColor
-    ), [style.borderColor])
-    const color = useMemo(() => {
-        const themeContentColor = themeScheme === "dark" ? "white" : "black"
-        return style.color ?? themeContentColor
-    }, [style.color])
+    const style = StyleSheet.flatten(props.style)
+    const backgroundColor = (style && style.backgroundColor) ?? defaultOutlineButtonBackgroundColor
+    const borderColor = (style && style.borderColor) ?? defaultOutlineButtonBorderColor
+    const color = (style && style.color) ?? (themeScheme === "dark" ? "white" : "black")
 
     const [interactionState, setInteractionState] = useState<InteractionStateToken>("enabled")
 

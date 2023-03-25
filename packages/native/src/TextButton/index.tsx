@@ -36,8 +36,8 @@ export function TextButton(props: TextButtonProps) {
 
     const themeScheme = useThemeScheme()
 
-    const style = useMemo(() => StyleSheet.flatten(props.style), [props.style])
-    const color = useMemo(() => style.color ?? defaultTextButtonColor, [style.color])
+    const style = StyleSheet.flatten(props.style)
+    const color = (style && style.color) ?? defaultTextButtonColor
 
     const [interactionState, setInteractionState] = useState<InteractionStateToken>("enabled")
 
