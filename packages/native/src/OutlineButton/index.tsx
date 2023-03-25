@@ -3,6 +3,7 @@ import { useCallback, useMemo, useState } from "react"
 import {
     ColorValue,
     GestureResponderEvent,
+    StyleProp,
     StyleSheet,
     TextStyle,
     TouchableOpacity,
@@ -19,7 +20,7 @@ export interface OutlineButtonProps extends
     Omit<TouchableOpacityProps, "style">
 {
     text: string;
-    style?: TextStyle;
+    style?: StyleProp<TextStyle>;
 }
 
 
@@ -32,16 +33,17 @@ export function OutlineButton(props: OutlineButtonProps) {
 
     const themeScheme = useThemeScheme()
 
+    const style = useMemo(() => StyleSheet.flatten(props.style), [props.style])
     const backgroundColor = useMemo(() => (
-        props.style?.backgroundColor ?? "transparent"
-    ), [props.style?.backgroundColor])
+        style.backgroundColor ?? "transparent"
+    ), [style.backgroundColor])
     const borderColor = useMemo(() => (
-        props.style?.borderColor ?? "gray"
-    ), [props.style?.borderColor])
+        style.borderColor ?? "gray"
+    ), [style.borderColor])
     const color = useMemo(() => {
         const themeContentColor = themeScheme === "dark" ? "white" : "black"
-        return props.style?.color ?? themeContentColor
-    }, [props.style?.color])
+        return style.color ?? themeContentColor
+    }, [style.color])
 
     const [interactionState, setInteractionState] = useState<InteractionStateToken>("enabled")
 
