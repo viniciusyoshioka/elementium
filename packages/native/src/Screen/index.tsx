@@ -1,7 +1,10 @@
 import { StyleSheet, View, ViewProps } from "react-native"
 
 
-export function Screen(props: ViewProps) {
+export interface ScreenProps extends ViewProps {}
+
+
+export function Screen(props: ScreenProps) {
     return (
         <View
             {...props}
