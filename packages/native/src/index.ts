@@ -1,5 +1,6 @@
 export * from "./FilledButton"
 export * from "./Icon"
+export * from "./Modal"
 export * from "./OutlineButton"
 export * from "./Screen"
 export * from "./Text"
