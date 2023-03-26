@@ -6,6 +6,7 @@ import { Pressable, StatusBar } from "react-native"
 import { ButtonScreen } from "@screens/Button"
 import { IconScreen } from "@screens/Icon"
 import { InputScreen } from "@screens/Input"
+import { ModalScreen } from "@screens/Modal"
 import { TextScreen } from "@screens/Text"
 import { useAppTheme } from "@theme"
 
@@ -52,6 +53,7 @@ export function Router() {
                 <Drawer.Screen name={"Button"} component={ButtonScreen} />
                 <Drawer.Screen name={"Icon"} component={IconScreen} />
                 <Drawer.Screen name={"Input"} component={InputScreen} />
+                <Drawer.Screen name={"Modal"} component={ModalScreen} />
                 <Drawer.Screen name={"Text"} component={TextScreen} />
             </Drawer.Navigator>
         </NavigationContainer>
