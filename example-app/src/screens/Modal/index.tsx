@@ -2,13 +2,19 @@ import { FilledButton, Screen } from "@elementium/native"
 import { useState } from "react"
 
 import { CompleteModal } from "./CompleteModal"
+import { SimpleModal } from "./SimpleModal"
 
 
 export function ModalScreen() {
 
 
+    const [isSimpleModalVisible, setIsSimpleModalVisible] = useState(false)
     const [isCompleteModalVisible, setIsCompleteModalVisible] = useState(false)
 
+
+    function openSimpleModal() {
+        setIsSimpleModalVisible(true)
+    }
 
     function openCompleteModal() {
         setIsCompleteModalVisible(true)
@@ -18,8 +24,19 @@ export function ModalScreen() {
     return (
         <Screen style={{ justifyContent: "center" }}>
             <FilledButton
+                text={"Simple Modal"}
+                onPress={openSimpleModal}
+            />
+
+            <FilledButton
                 text={"Complete Modal"}
                 onPress={openCompleteModal}
+                style={{ marginTop: 16 }}
+            />
+
+            <SimpleModal
+                visible={isSimpleModalVisible}
+                onRequestClose={() => setIsSimpleModalVisible(false)}
             />
 
             <CompleteModal
