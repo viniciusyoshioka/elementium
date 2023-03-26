@@ -11,8 +11,9 @@ import {
     ViewStyle
 } from "react-native"
 
-import { ExtendableOptionalIconProps, Icon, Text, useThemeScheme } from ".."
-import { InteractionStateToken, tokens } from "../tokens"
+import { ExtendableOptionalIconProps, Icon, Text } from ".."
+import { useThemeScheme } from "../../theme"
+import { InteractionStateToken, tokens } from "../../tokens"
 
 
 export interface OutlineButtonProps extends

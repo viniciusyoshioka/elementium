@@ -9,8 +9,8 @@ import {
     ViewStyle
 } from "react-native"
 
-import { useThemeScheme } from ".."
-import { tokens } from "../tokens"
+import { useThemeScheme } from "../../theme"
+import { tokens } from "../../tokens"
 
 
 export interface ModalContainerProps extends TouchableOpacityProps {
