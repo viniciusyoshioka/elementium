@@ -61,6 +61,7 @@ export interface Tokens {
     shape: ShapeTokens;
     stateOpacity: {
         container: StateOpacityTokens;
+        containerOverlay: number;
         content: StateOpacityTokens;
     };
 }
@@ -140,6 +141,7 @@ export const tokens: Tokens = {
             dragged: 0.16,
             disabled: 0.12,
         },
+        containerOverlay: 0.12,
         content: {
             hover: 0.08,
             focus: 0.12,
