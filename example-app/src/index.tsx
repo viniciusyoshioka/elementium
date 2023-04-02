@@ -1,4 +1,4 @@
-import { ThemeSchemeProvider } from "@elementium/native"
+import { DarkTheme, LightTheme, ThemeProvider } from "@elementium/native"
 import { useState } from "react"
 import { useColorScheme } from "react-native"
 
@@ -34,10 +34,10 @@ export function App() {
 
 
     return (
-        <ThemeSchemeProvider value={isDarkTheme ? "dark" : "light"}>
+        <ThemeProvider value={isDarkTheme ? DarkTheme : LightTheme}>
             <AppThemeProvider value={getTheme()}>
                 <Router />
             </AppThemeProvider>
-        </ThemeSchemeProvider>
+        </ThemeProvider>
     )
 }
