@@ -33,77 +33,92 @@ export const defaultTextSize: TextSize = "medium"
 export const defaultTextTypography: TextTypographyStyle = {
     display: StyleSheet.create({
         large: {
-            lineHeight: 64,
             fontSize: 57,
+            lineHeight: 64,
+            letterSpacing: -0.25,
         },
         medium: {
-            lineHeight: 52,
             fontSize: 45,
+            lineHeight: 52,
+            letterSpacing: 0,
         },
         small: {
-            lineHeight: 44,
             fontSize: 36,
+            lineHeight: 44,
+            letterSpacing: 0,
         },
     }),
     headline: StyleSheet.create({
         large: {
-            lineHeight: 40,
             fontSize: 32,
+            lineHeight: 40,
+            letterSpacing: 0,
         },
         medium: {
-            lineHeight: 36,
             fontSize: 28,
+            lineHeight: 36,
+            letterSpacing: 0,
         },
         small: {
-            lineHeight: 32,
             fontSize: 24,
+            lineHeight: 32,
+            letterSpacing: 0,
         },
     }),
     title: StyleSheet.create({
         large: {
-            lineHeight: 28,
             fontSize: 22,
+            lineHeight: 28,
+            letterSpacing: 0,
         },
         medium: {
-            lineHeight: 24,
             fontSize: 16,
             fontWeight: "500",
+            lineHeight: 24,
+            letterSpacing: 0.15,
         },
         small: {
-            lineHeight: 20,
             fontSize: 14,
             fontWeight: "500",
+            lineHeight: 20,
+            letterSpacing: 0.1,
         },
     }),
     body: StyleSheet.create({
         large: {
-            lineHeight: 24,
             fontSize: 16,
+            lineHeight: 24,
+            letterSpacing: 0.5,
         },
         medium: {
-            lineHeight: 20,
             fontSize: 14,
+            lineHeight: 20,
+            letterSpacing: 0.25,
         },
         small: {
-            lineHeight: 16,
             fontSize: 12,
+            lineHeight: 16,
+            letterSpacing: 0.4,
         },
     }),
     label: StyleSheet.create({
         large: {
-            lineHeight: 20,
             fontSize: 14,
             fontWeight: "500",
+            lineHeight: 20,
+            letterSpacing: 0.1,
         },
         medium: {
-            lineHeight: 16,
             fontSize: 12,
             fontWeight: "500",
+            lineHeight: 16,
+            letterSpacing: 0.5,
         },
         small: {
-            lineHeight: 16,
             fontSize: 11,
             fontWeight: "500",
+            lineHeight: 16,
+            letterSpacing: 0.5,
         },
     }),
 }
