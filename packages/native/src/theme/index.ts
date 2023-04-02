@@ -1,1 +1,1 @@
-export * from "./ThemeScheme"
+export * from "./Theme"
