@@ -40,6 +40,12 @@ export interface Elevation {
     level3: number;
     level4: number;
     level5: number;
+    opacityLevel0: number;
+    opacityLevel1: number;
+    opacityLevel2: number;
+    opacityLevel3: number;
+    opacityLevel4: number;
+    opacityLevel5: number;
 }
 
 
@@ -65,7 +71,6 @@ export interface OpacityState {
 export interface SurfaceStates {
     container: OpacityState;
     content: OpacityState;
-    overlay: number;
 }
 
 

@@ -9,6 +9,12 @@ export const CommonTheme: CommonThemeType = {
         level3: 6,
         level4: 8,
         level5: 12,
+        opacityLevel0: 0,
+        opacityLevel1: 0.05,
+        opacityLevel2: 0.08,
+        opacityLevel3: 0.11,
+        opacityLevel4: 0.12,
+        opacityLevel5: 0.14,
     },
     shape: {
         none: 0,
@@ -34,7 +40,6 @@ export const CommonTheme: CommonThemeType = {
             dragged: 0.16,
             focused: 0.12,
         },
-        overlay: 0.12,
     },
     typography: {
         display: {
