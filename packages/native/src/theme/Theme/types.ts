@@ -60,6 +60,8 @@ export interface Shape {
 }
 
 
+export type InteractionState = "enabled" | "disabled" | "hover" | "pressed" | "dragged" | "focused"
+
 export interface OpacityState {
     disabled: number;
     hover: number;
