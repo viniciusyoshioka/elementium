@@ -1,5 +1,4 @@
 import {
-    ColorValue,
     Modal as RNModal,
     ModalProps as RNModalProps,
     StyleProp,
@@ -12,7 +11,6 @@ import { ModalContainer, ModalScrim } from "."
 export interface ModalProps extends RNModalProps {
     scrimStyle?: StyleProp<ViewStyle>;
     containerStyle?: StyleProp<ViewStyle>;
-    tintColor?: string | ColorValue;
 }
 
 
@@ -24,7 +22,7 @@ export function Modal(props: ModalProps) {
             {...props}
         >
             <ModalScrim onPress={props.onRequestClose} style={props.scrimStyle}>
-                <ModalContainer style={props.containerStyle} tintColor={props.tintColor}>
+                <ModalContainer style={props.containerStyle}>
                     {props.children}
                 </ModalContainer>
             </ModalScrim>
