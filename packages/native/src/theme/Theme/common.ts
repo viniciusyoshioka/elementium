@@ -47,7 +47,7 @@ export const CommonTheme: CommonThemeType = {
                 fontSize: 57,
                 fontWeight: "normal",
                 lineHeight: 64,
-                letterSpacing: -0.25,
+                letterSpacing: 0,
             },
             medium: {
                 fontSize: 45,
