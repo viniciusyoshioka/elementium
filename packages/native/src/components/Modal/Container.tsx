@@ -1,7 +1,6 @@
 import { Color, Prisma } from "@elementium/color"
 import { useMemo } from "react"
 import {
-    ColorValue,
     StyleSheet,
     TouchableOpacity,
     TouchableOpacityProps,
@@ -9,16 +8,14 @@ import {
     ViewStyle
 } from "react-native"
 
-import { useThemeScheme } from "../../theme"
-import { tokens } from "../../tokens"
+import { useTheme } from "../../theme"
 
 
 export interface ModalContainerProps extends TouchableOpacityProps {
-    tintColor?: string | ColorValue;
+    hasTintColor?: boolean;
 }
 
 
-export const defaultModalContainerTintColor = "transparent"
 export const defaultModalContainerMinWidth = 280
 export const defaultModalContainerMaxWidth = 560
 export const defaultModalContainerMaxHeight = 560
@@ -30,7 +27,11 @@ export function ModalContainer(props: ModalContainerProps) {
 
 
     const { width, height } = useWindowDimensions()
-    const themeScheme = useThemeScheme()
+    const { color, elevation, shape } = useTheme()
+
+    const containerBorderStyle: ViewStyle = {
+        borderRadius: shape.extraLarge,
+    }
 
     const containerSizeStyle: ViewStyle = useMemo(() => {
         const maxWidthWithinWindow = Math.max(
@@ -44,21 +45,28 @@ export function ModalContainer(props: ModalContainerProps) {
     }, [width, height])
 
     const style = StyleSheet.flatten(props.style)
-    const backgroundColor = (style && style.backgroundColor) ?? (themeScheme === "dark" ? "black" : "white")
-    const tintColor = props.tintColor ?? defaultModalContainerTintColor
+    const hasTintColor = props.hasTintColor ?? true
+    const backgroundColor = (style && style.backgroundColor) ?? color.surface
+    const tintColor = (hasTintColor && color.primary) ?? "transparent"
     const containerColorStyle: ViewStyle = useMemo(() => {
         const containerBackgound = new Color(backgroundColor as string)
-        const containerOverlay = new Color(tintColor as string).setA(tokens.stateOpacity.containerOverlay)
+        const containerOverlay = new Color(tintColor as string).setA(elevation.opacityLevel3)
         const newContainerBackground = Prisma.addColors(containerBackgound, containerOverlay).toRgba()
         return { backgroundColor: newContainerBackground }
-    }, [backgroundColor, tintColor])
+    }, [backgroundColor, tintColor, elevation.opacityLevel3])
 
 
     return (
         <TouchableOpacity
             activeOpacity={1}
             {...props}
-            style={[styles.container, containerSizeStyle, style, containerColorStyle]}
+            style={[
+                styles.container,
+                containerBorderStyle,
+                containerSizeStyle,
+                style,
+                containerColorStyle
+            ]}
         />
     )
 }
@@ -70,6 +78,5 @@ const styles = StyleSheet.create({
         maxWidth: defaultModalContainerMaxWidth,
         maxHeight: defaultModalContainerMaxHeight,
         padding: defaultModalContainerPadding,
-        borderRadius: tokens.shape.extraLarge,
     },
 })
