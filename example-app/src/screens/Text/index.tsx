@@ -1,5 +1,4 @@
-import { Text } from "@elementium/native"
-import { ScrollView } from "react-native"
+import { ScrollScreen, Text } from "@elementium/native"
 
 import { useHeaderColorOnScroll } from "@hooks"
 import { useAppTheme } from "@theme"
@@ -14,8 +13,8 @@ export function TextScreen() {
 
 
     return (
-        <ScrollView
-            contentContainerStyle={{ padding: 16 }}
+        <ScrollScreen
+            contentContainerStyle={{ padding: 16, alignItems: "flex-start" }}
             onScroll={e => scrollY.value = e.nativeEvent.contentOffset.y}
         >
             <Text variant={"display"} size={"large"} style={{ color: color.onBackground, marginBottom: 8 }}>
@@ -77,6 +76,6 @@ export function TextScreen() {
             <Text variant={"label"} size={"small"} style={{ color: color.onBackground }}>
                 Label Small
             </Text>
-        </ScrollView>
+        </ScrollScreen>
     )
 }

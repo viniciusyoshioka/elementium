@@ -1,5 +1,4 @@
-import { Button, Text } from "@elementium/native"
-import { ScrollView } from "react-native"
+import { Button, ScrollScreen, Text } from "@elementium/native"
 
 import { useHeaderColorOnScroll } from "@hooks"
 import { useAppTheme } from "@theme"
@@ -14,8 +13,8 @@ export function ButtonScreen() {
 
 
     return (
-        <ScrollView
-            contentContainerStyle={{ padding: 16, alignItems: "center" }}
+        <ScrollScreen
+            contentContainerStyle={{ padding: 16 }}
             onScroll={e => scrollY.value = e.nativeEvent.contentOffset.y}
         >
             <>
@@ -124,6 +123,6 @@ export function ButtonScreen() {
                     disabled
                 />
             </>
-        </ScrollView>
+        </ScrollScreen>
     )
 }
