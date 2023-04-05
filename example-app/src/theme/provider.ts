@@ -1,9 +1,10 @@
 import { createContext, useContext } from "react"
 
 import { LightTheme } from "./light"
+import { AppThemeType } from "./types"
 
 
-const AppThemeContext = createContext(LightTheme)
+const AppThemeContext = createContext<AppThemeType>(LightTheme)
 
 
 export const AppThemeProvider = AppThemeContext.Provider
