@@ -9,13 +9,13 @@ export function TextScreen() {
 
     const { color } = useAppTheme()
 
-    const scrollY = useHeaderColorOnScroll([0, 56], [color.background, color.surface])
+    const onScroll = useHeaderColorOnScroll()
 
 
     return (
         <ScrollScreen
             contentContainerStyle={{ padding: 16, alignItems: "flex-start" }}
-            onScroll={e => scrollY.value = e.nativeEvent.contentOffset.y}
+            onScroll={onScroll}
         >
             <Text variant={"display"} size={"large"} style={{ color: color.onBackground, marginBottom: 8 }}>
                 Display Large

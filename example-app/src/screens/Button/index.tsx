@@ -9,14 +9,11 @@ export function ButtonScreen() {
 
     const { color } = useAppTheme()
 
-    const scrollY = useHeaderColorOnScroll([0, 56], [color.background, color.surface])
+    const onScroll = useHeaderColorOnScroll()
 
 
     return (
-        <ScrollScreen
-            contentContainerStyle={{ padding: 16 }}
-            onScroll={e => scrollY.value = e.nativeEvent.contentOffset.y}
-        >
+        <ScrollScreen contentContainerStyle={{ padding: 16 }} onScroll={onScroll}>
             <>
                 <Text
                     variant={"title"}
