@@ -1,4 +1,4 @@
-import { FilledButton, OutlineButton, Text, TextButton } from "@elementium/native"
+import { Button, Text } from "@elementium/native"
 import { ScrollView } from "react-native"
 
 import { useHeaderColorOnScroll } from "@hooks"
@@ -23,46 +23,30 @@ export function ButtonScreen() {
                     variant={"title"}
                     size={"large"}
                     style={{ color: color.onBackground, width: "100%" }}
-                    children={"FilledButton"}
+                    children={"Filled"}
                 />
 
-                <FilledButton
+                <Button
                     text={"Olá, mundo!"}
-                    style={{
-                        marginTop: 16,
-                        backgroundColor: color.primary,
-                        color: color.onPrimary,
-                    }}
+                    style={{ marginTop: 16 }}
                 />
 
-                <FilledButton
+                <Button
                     text={"Olá, mundo!"}
                     iconName={"add"}
-                    style={{
-                        marginTop: 16,
-                        backgroundColor: color.primary,
-                        color: color.onPrimary,
-                    }}
+                    style={{ marginTop: 16 }}
                 />
 
-                <FilledButton
+                <Button
                     text={"Olá, mundo!"}
-                    style={{
-                        marginTop: 16,
-                        backgroundColor: color.primary,
-                        color: color.onPrimary,
-                    }}
+                    style={{ marginTop: 16 }}
                     disabled
                 />
 
-                <FilledButton
+                <Button
                     text={"Olá, mundo!"}
                     iconName={"add"}
-                    style={{
-                        marginTop: 16,
-                        backgroundColor: color.primary,
-                        color: color.onPrimary,
-                    }}
+                    style={{ marginTop: 16 }}
                     disabled
                 />
             </>
@@ -72,90 +56,34 @@ export function ButtonScreen() {
                     variant={"title"}
                     size={"large"}
                     style={{ color: color.onBackground, width: "100%", marginTop: 32 }}
-                    children={"OutlineButton"}
+                    children={"Outline"}
                 />
 
-                <OutlineButton
+                <Button
+                    variant={"outline"}
                     text={"Olá, mundo!"}
-                    style={{
-                        marginTop: 16,
-                        color: color.primary,
-                        borderColor: color.outline,
-                    }}
+                    style={{ marginTop: 16 }}
                 />
 
-                <OutlineButton
+                <Button
+                    variant={"outline"}
                     text={"Olá, mundo!"}
                     iconName={"add"}
-                    style={{
-                        marginTop: 16,
-                        color: color.primary,
-                        borderColor: color.outline,
-                    }}
+                    style={{ marginTop: 16 }}
                 />
 
-                <OutlineButton
+                <Button
+                    variant={"outline"}
                     text={"Olá, mundo!"}
-                    style={{
-                        marginTop: 16,
-                        color: color.primary,
-                        borderColor: color.outline,
-                    }}
+                    style={{ marginTop: 16 }}
                     disabled
                 />
 
-                <OutlineButton
+                <Button
+                    variant={"outline"}
                     text={"Olá, mundo!"}
                     iconName={"add"}
-                    style={{
-                        marginTop: 16,
-                        color: color.primary,
-                        borderColor: color.outline,
-                    }}
-                    disabled
-                />
-
-                <OutlineButton
-                    text={"Olá, mundo!"}
-                    style={{
-                        marginTop: 16,
-                        color: color.primary,
-                        borderColor: color.outline,
-                        backgroundColor: color.primaryContainer,
-                    }}
-                />
-
-                <OutlineButton
-                    text={"Olá, mundo!"}
-                    iconName={"add"}
-                    style={{
-                        marginTop: 16,
-                        color: color.primary,
-                        borderColor: color.outline,
-                        backgroundColor: color.primaryContainer,
-                    }}
-                />
-
-                <OutlineButton
-                    text={"Olá, mundo!"}
-                    style={{
-                        marginTop: 16,
-                        color: color.primary,
-                        borderColor: color.outline,
-                        backgroundColor: color.primaryContainer,
-                    }}
-                    disabled
-                />
-
-                <OutlineButton
-                    text={"Olá, mundo!"}
-                    iconName={"add"}
-                    style={{
-                        marginTop: 16,
-                        color: color.primary,
-                        borderColor: color.outline,
-                        backgroundColor: color.primaryContainer,
-                    }}
+                    style={{ marginTop: 16 }}
                     disabled
                 />
             </>
@@ -165,30 +93,34 @@ export function ButtonScreen() {
                     variant={"title"}
                     size={"large"}
                     style={{ color: color.onBackground, width: "100%", marginTop: 32 }}
-                    children={"TextButton"}
+                    children={"Text"}
                 />
 
-                <TextButton
+                <Button
+                    variant={"text"}
                     text={"Olá, mundo!"}
-                    style={{ marginTop: 16,color: color.primary }}
+                    style={{ marginTop: 16 }}
                 />
 
-                <TextButton
+                <Button
+                    variant={"text"}
                     text={"Olá, mundo!"}
                     iconName={"add"}
-                    style={{ marginTop: 16,color: color.primary }}
+                    style={{ marginTop: 16 }}
                 />
 
-                <TextButton
+                <Button
+                    variant={"text"}
                     text={"Olá, mundo!"}
-                    style={{ marginTop: 16,color: color.primary }}
+                    style={{ marginTop: 16 }}
                     disabled
                 />
 
-                <TextButton
+                <Button
+                    variant={"text"}
                     text={"Olá, mundo!"}
                     iconName={"add"}
-                    style={{ marginTop: 16,color: color.primary }}
+                    style={{ marginTop: 16 }}
                     disabled
                 />
             </>
