@@ -1,4 +1,4 @@
-import { FilledButton, Screen } from "@elementium/native"
+import { Button, Screen } from "@elementium/native"
 import { useState } from "react"
 
 import { CompleteModal } from "./CompleteModal"
@@ -23,12 +23,12 @@ export function ModalScreen() {
 
     return (
         <Screen style={{ justifyContent: "center" }}>
-            <FilledButton
+            <Button
                 text={"Simple Modal"}
                 onPress={openSimpleModal}
             />
 
-            <FilledButton
+            <Button
                 text={"Complete Modal"}
                 onPress={openCompleteModal}
                 style={{ marginTop: 16 }}

@@ -1,11 +1,11 @@
 import {
+    Button,
     Modal,
     ModalActions,
     ModalDescription,
     ModalIcon,
     ModalProps,
-    ModalTitle,
-    TextButton
+    ModalTitle
 } from "@elementium/native"
 
 import { useAppTheme } from "@theme"
@@ -23,7 +23,7 @@ export function CompleteModal(props: CompleteModalProps) {
     return (
         <Modal
             containerStyle={{ backgroundColor: color.surface }}
-            tintColor={color.primary}
+            hasTintColor={true}
             {...props}
         >
             <ModalIcon
@@ -42,7 +42,7 @@ export function CompleteModal(props: CompleteModalProps) {
             </ModalDescription>
 
             <ModalActions>
-                <TextButton text={"Ok"} onPress={props.onRequestClose} />
+                <Button variant={"text"} text={"Ok"} onPress={props.onRequestClose} />
             </ModalActions>
         </Modal>
     )
