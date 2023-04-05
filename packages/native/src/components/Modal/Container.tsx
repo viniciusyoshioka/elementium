@@ -29,8 +29,10 @@ export function ModalContainer(props: ModalContainerProps) {
     const { width, height } = useWindowDimensions()
     const { color, elevation, shape } = useTheme()
 
-    const containerBorderStyle: ViewStyle = {
+
+    const containerStyle: ViewStyle = {
         borderRadius: shape.extraLarge,
+        elevation: elevation.level3,
     }
 
     const containerSizeStyle: ViewStyle = useMemo(() => {
@@ -62,7 +64,7 @@ export function ModalContainer(props: ModalContainerProps) {
             {...props}
             style={[
                 styles.container,
-                containerBorderStyle,
+                containerStyle,
                 containerSizeStyle,
                 style,
                 containerColorStyle
