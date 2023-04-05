@@ -37,7 +37,7 @@ export function Button(props: ButtonProps) {
             return backgroundColorFromStyle ?? color.primary
         }
         return "transparent"
-    }, [style.backgroundColor, props.variant, color.primary])
+    }, [style, props.variant, color.primary])
 
     const colorStyle: ColorValue = useMemo(() => {
         const colorFromStyle = (style && style.color)
@@ -46,12 +46,12 @@ export function Button(props: ButtonProps) {
             return colorFromStyle ?? color.onPrimary
         }
         return colorFromStyle ?? color.primary
-    }, [style.color, props.variant, color.onPrimary, color.primary])
+    }, [style, props.variant, color.onPrimary, color.primary])
 
     const borderColorStyle: ColorValue = useMemo(() => {
         const borderColorFromStyle = (style && style.borderColor)
         return borderColorFromStyle ?? color.outline
-    }, [style.borderColor, color.outline])
+    }, [style, color.outline])
 
 
     const containerStyle: ViewStyle = useMemo(() => {
