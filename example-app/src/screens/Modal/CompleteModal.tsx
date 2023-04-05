@@ -8,34 +8,20 @@ import {
     ModalTitle
 } from "@elementium/native"
 
-import { useAppTheme } from "@theme"
-
 
 export interface CompleteModalProps extends ModalProps {}
 
 
 export function CompleteModal(props: CompleteModalProps) {
-
-
-    const { color } = useAppTheme()
-
-
     return (
-        <Modal
-            containerStyle={{ backgroundColor: color.surface }}
-            hasTintColor={true}
-            {...props}
-        >
-            <ModalIcon
-                name={"mobile-friendly"}
-                color={color.onSurface} // TODO use color.secondary
-            />
+        <Modal hasTintColor={true} {...props}>
+            <ModalIcon name={"mobile-friendly"} />
 
-            <ModalTitle style={{ color: color.onSurface }} hasIconAbove={true}>
+            <ModalTitle hasIconAbove={true}>
                 Complete modal
             </ModalTitle>
 
-            <ModalDescription style={{ color: color.onSurfaceVariant }}>
+            <ModalDescription>
                 This is a complete modal.
                 It has an icon, title, description and the actions section
                 with one "Ok" button.
