@@ -7,7 +7,7 @@ export class Color {
 
     static HexRegex = /^#([a-fA-F0-9]{8}|[a-fA-F0-9]{6}|[a-fA-F0-9]{4}|[a-fA-F0-9]{3})$/
     static RgbRegex = /^rgb\((\d{1,3}), ?(\d{1,3}), ?(\d{1,3})\)$/
-    static RgbaRegex = /^rgba\((\d{1,3}), ?(\d{1,3}), ?(\d{1,3}), ?((0?\.\d)|(1(\.0)?))\)$/
+    static RgbaRegex = /^rgba\((\d{1,3}), ?(\d{1,3}), ?(\d{1,3}), ?((0?\.\d+)|(1(\.0)?))\)$/
 
 
     private r: number
