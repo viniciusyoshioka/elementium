@@ -30,13 +30,18 @@ function processStyle(style: PressableStyleProp) {
 
     const keys = Object.keys(styleObject) as (keyof ViewStyle)[]
     keys.forEach(key => {
+        const includesPadding = key.toLowerCase().includes("padding")
         const includesMargin = key.toLowerCase().includes("margin")
         const includesBorder = key.toLowerCase().includes("border")
+        const value = styleObject[key]
 
-        if (includesMargin || includesBorder) {
-            viewStyle[key] = styleObject[key]
+        if (includesPadding) {
+            pressableStyle[key] = value
+        } else if (includesMargin || includesBorder) {
+            viewStyle[key] = value
         } else {
-            pressableStyle[key] = styleObject[key]
+            viewStyle[key] = value
+            pressableStyle[key] = value
         }
     })
 
