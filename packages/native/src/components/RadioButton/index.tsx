@@ -12,12 +12,15 @@ export interface RadioButtonColors {
 }
 
 
-export interface RadioButtonProps extends PressableProps {
+export interface RadioButtonEspecificProps {
     value?: boolean;
     onValueChange?: (value: boolean) => void;
     colors?: RadioButtonColors;
     style?: StyleProp<ViewStyle>;
 }
+
+
+export interface RadioButtonProps extends Omit<PressableProps, "style">, RadioButtonEspecificProps {}
 
 
 export function RadioButton(props: RadioButtonProps) {
