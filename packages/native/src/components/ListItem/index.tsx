@@ -83,7 +83,9 @@ export function ListItem(props: ListItemProps) {
         marginRight: hasTrailingComponent ? 16 : undefined,
     }
 
-    const rippleColor = new Color(color.onSurface).setA(state.container.pressed).toRgba()
+    const rippleColor = props.disabled
+        ? "transparent"
+        : new Color(color.onSurface).setA(state.container.pressed).toRgba()
 
 
     const LeadingComponent = useCallback((): JSX.Element | null => {
