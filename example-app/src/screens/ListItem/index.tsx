@@ -102,6 +102,14 @@ export function ListItemScreen() {
                 leadingIcon={{ iconName: "home" }}
                 trailingIcon={{ iconName: "navigate-next" }}
             />
+
+            <ListItem
+                title={"ListItem"}
+                description={"Disabled ListItem with description, leading and trailing icon, in a long text, to test the wrapping of the description"}
+                leadingIcon={{ iconName: "home" }}
+                trailingIcon={{ iconName: "navigate-next" }}
+                disabled
+            />
         </ScrollScreen>
     )
 }
