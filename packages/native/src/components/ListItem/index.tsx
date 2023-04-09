@@ -62,8 +62,8 @@ export function ListItem(props: ListItemProps) {
             return { backgroundColor: Prisma.addColors(background, overlay).toRgba() }
         }
 
-        return { backgroundColor: color.surface }
-    }, [props.disabled, backgroundColorStyle, color.onSurface, state.container.focused, color.surface])
+        return { backgroundColor: backgroundColorStyle }
+    }, [props.disabled, backgroundColorStyle, color.onSurface, state.container.focused])
 
     const containerStyle: ViewStyle = useMemo(() => {
         const baseStyle = { ...styles.container, minHeight, maxHeight }
