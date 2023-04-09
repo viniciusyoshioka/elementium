@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native"
 import { Pressable, StatusBar } from "react-native"
 
 import { ButtonScreen } from "@screens/Button"
+import { DividerScreen } from "@screens/Divider"
 import { IconScreen } from "@screens/Icon"
 import { InputScreen } from "@screens/Input"
 import { ListItemScreen } from "@screens/ListItem"
@@ -53,6 +54,7 @@ export function Router() {
                 }}
             >
                 <Drawer.Screen name={"Button"} component={ButtonScreen} />
+                <Drawer.Screen name={"Divider"} component={DividerScreen} />
                 <Drawer.Screen name={"Icon"} component={IconScreen} />
                 <Drawer.Screen name={"Input"} component={InputScreen} />
                 <Drawer.Screen name={"ListItem"} component={ListItemScreen} />
