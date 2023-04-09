@@ -2,6 +2,7 @@ import { Button, Screen } from "@elementium/native"
 import { useState } from "react"
 
 import { CompleteModal } from "./CompleteModal"
+import { ModalWithList } from "./ModalWithList"
 import { SimpleModal } from "./SimpleModal"
 
 
@@ -10,28 +11,24 @@ export function ModalScreen() {
 
     const [isSimpleModalVisible, setIsSimpleModalVisible] = useState(false)
     const [isCompleteModalVisible, setIsCompleteModalVisible] = useState(false)
-
-
-    function openSimpleModal() {
-        setIsSimpleModalVisible(true)
-    }
-
-    function openCompleteModal() {
-        setIsCompleteModalVisible(true)
-    }
+    const [isModalWithListVisible, setIsModalWithListVisible] = useState(false)
 
 
     return (
-        <Screen style={{ alignItems: "center", justifyContent: "center" }}>
+        <Screen style={{ alignItems: "center", justifyContent: "center", rowGap: 16 }}>
             <Button
                 text={"Simple Modal"}
-                onPress={openSimpleModal}
+                onPress={() => setIsSimpleModalVisible(true)}
             />
 
             <Button
                 text={"Complete Modal"}
-                onPress={openCompleteModal}
-                style={{ marginTop: 16 }}
+                onPress={() => setIsCompleteModalVisible(true)}
+            />
+
+            <Button
+                text={"Modal with list"}
+                onPress={() => setIsModalWithListVisible(true)}
             />
 
             <SimpleModal
@@ -42,6 +39,11 @@ export function ModalScreen() {
             <CompleteModal
                 visible={isCompleteModalVisible}
                 onRequestClose={() => setIsCompleteModalVisible(false)}
+            />
+
+            <ModalWithList
+                visible={isModalWithListVisible}
+                onRequestClose={() => setIsModalWithListVisible(false)}
             />
         </Screen>
     )
