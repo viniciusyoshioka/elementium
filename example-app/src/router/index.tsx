@@ -3,6 +3,7 @@ import { createDrawerNavigator } from "@react-navigation/drawer"
 import { NavigationContainer } from "@react-navigation/native"
 import { Pressable, StatusBar } from "react-native"
 
+import { BadgeScreen } from "@screens/Badge"
 import { ButtonScreen } from "@screens/Button"
 import { DividerScreen } from "@screens/Divider"
 import { IconScreen } from "@screens/Icon"
@@ -53,6 +54,7 @@ export function Router() {
                     sceneContainerStyle: { backgroundColor: color.background },
                 }}
             >
+                <Drawer.Screen name={"Badge"} component={BadgeScreen} />
                 <Drawer.Screen name={"Button"} component={ButtonScreen} />
                 <Drawer.Screen name={"Divider"} component={DividerScreen} />
                 <Drawer.Screen name={"Icon"} component={IconScreen} />
