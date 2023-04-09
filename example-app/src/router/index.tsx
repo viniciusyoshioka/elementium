@@ -47,9 +47,9 @@ export function Router() {
                         </Pressable>
                     ),
                     drawerStyle: { backgroundColor: color.surface },
-                    drawerInactiveTintColor: color.onSurface,
-                    drawerActiveBackgroundColor: color.surfaceVariant,
-                    drawerActiveTintColor: color.onSurfaceVariant,
+                    drawerInactiveTintColor: color.onSurfaceVariant,
+                    drawerActiveBackgroundColor: color.secondaryContainer,
+                    drawerActiveTintColor: color.onSecondaryContainer,
                     sceneContainerStyle: { backgroundColor: color.background },
                 }}
             >
