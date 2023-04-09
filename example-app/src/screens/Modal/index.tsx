@@ -22,7 +22,7 @@ export function ModalScreen() {
 
 
     return (
-        <Screen style={{ justifyContent: "center" }}>
+        <Screen style={{ alignItems: "center", justifyContent: "center" }}>
             <Button
                 text={"Simple Modal"}
                 onPress={openSimpleModal}

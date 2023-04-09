@@ -10,7 +10,7 @@ export function RadioButtonScreen() {
 
 
     return (
-        <Screen>
+        <Screen style={{ alignItems: "center" }}>
             <RadioButton value={isRadioButtonChecked} onValueChange={setIsRadioButtonChecked} />
             <RadioButton value={false} />
             <RadioButton value={true} />

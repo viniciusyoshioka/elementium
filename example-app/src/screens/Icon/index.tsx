@@ -10,7 +10,7 @@ export function IconScreen() {
 
 
     return (
-        <Screen style={{ justifyContent: "center" }}>
+        <Screen style={{ alignItems: "center", justifyContent: "center" }}>
             <Icon
                 name={"add"}
                 size={32}
