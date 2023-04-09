@@ -9,6 +9,7 @@ import { DividerScreen } from "@screens/Divider"
 import { IconScreen } from "@screens/Icon"
 import { InputScreen } from "@screens/Input"
 import { ListItemScreen } from "@screens/ListItem"
+import { MenuScreen } from "@screens/Menu"
 import { ModalScreen } from "@screens/Modal"
 import { RadioButtonScreen } from "@screens/RadioButton"
 import { TextScreen } from "@screens/Text"
@@ -60,6 +61,7 @@ export function Router() {
                 <Drawer.Screen name={"Icon"} component={IconScreen} />
                 <Drawer.Screen name={"Input"} component={InputScreen} />
                 <Drawer.Screen name={"ListItem"} component={ListItemScreen} />
+                <Drawer.Screen name={"Menu"} component={MenuScreen} />
                 <Drawer.Screen name={"Modal"} component={ModalScreen} />
                 <Drawer.Screen name={"RadioButton"} component={RadioButtonScreen} />
                 <Drawer.Screen name={"Text"} component={TextScreen} />
