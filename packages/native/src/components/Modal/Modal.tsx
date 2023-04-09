@@ -17,11 +17,7 @@ export interface ModalProps extends RNModalProps {
 
 export function Modal(props: ModalProps) {
     return (
-        <RNModal
-            transparent={true}
-            statusBarTranslucent={true}
-            {...props}
-        >
+        <RNModal transparent={true} {...props}>
             <ModalScrim onPress={props.onRequestClose} style={props.scrimStyle}>
                 <ModalContainer style={props.containerStyle} hasTintColor={props.hasTintColor}>
                     {props.children}
