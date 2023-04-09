@@ -1,15 +1,14 @@
 import { Color, Prisma } from "@elementium/color"
 import { ComponentType, ReactElement, useCallback, useMemo, useState } from "react"
-import { ColorValue, StyleSheet, View, ViewStyle } from "react-native"
-import { RectButton, RectButtonProps } from "react-native-gesture-handler"
+import { ColorValue, StyleProp, StyleSheet, View, ViewStyle } from "react-native"
 
-import { ExtendableIconProps, Icon, Text } from ".."
+import { ExtendableIconProps, Icon, Pressable, PressableProps, Text } from ".."
 import { useTheme } from "../../theme"
 import { Description } from "./Description"
 import { Title } from "./Title"
 
 
-export interface ListItemProps extends RectButtonProps {
+export interface ListItemProps extends PressableProps {
     title: string;
     description?: string;
 
@@ -22,6 +21,7 @@ export interface ListItemProps extends RectButtonProps {
 
     disabled?: boolean;
     alignOnCenterInThreeLines?: boolean;
+    style?: StyleProp<ViewStyle>;
 }
 
 
@@ -145,8 +145,8 @@ export function ListItem(props: ListItemProps) {
 
 
     return (
-        <RectButton
-            rippleColor={rippleColor}
+        <Pressable
+            android_ripple={{ color: rippleColor }}
             {...props}
             style={[containerStyle, style, containerColorStyle]}
         >
@@ -165,13 +165,14 @@ export function ListItem(props: ListItemProps) {
             </View>
 
             {hasTrailingComponent && <TrailingComponent />}
-        </RectButton>
+        </Pressable>
     )
 }
 
 
 const styles = StyleSheet.create({
     container: {
+        flex: 1,
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "flex-start",
