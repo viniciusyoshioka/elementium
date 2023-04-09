@@ -39,42 +39,42 @@ export function ModalWithList(props: ModalWithListProps) {
                     title={"Item A"}
                     value={selectedItem === "A"}
                     onPress={() => setSelectedItem("A")}
-                    style={{ backgroundColor: "transparent" }}
+                    style={{ backgroundColor: "transparent", paddingLeft: 0 }}
                 />
 
                 <RadioListItem
                     title={"Item B"}
                     value={selectedItem === "B"}
                     onPress={() => setSelectedItem("B")}
-                    style={{ backgroundColor: "transparent" }}
+                    style={{ backgroundColor: "transparent", paddingLeft: 0 }}
                 />
 
                 <RadioListItem
                     title={"Item C"}
                     value={selectedItem === "C"}
                     onPress={() => setSelectedItem("C")}
-                    style={{ backgroundColor: "transparent" }}
+                    style={{ backgroundColor: "transparent", paddingLeft: 0 }}
                 />
 
                 <RadioListItem
                     title={"Item D"}
                     value={selectedItem === "D"}
                     onPress={() => setSelectedItem("D")}
-                    style={{ backgroundColor: "transparent" }}
+                    style={{ backgroundColor: "transparent", paddingLeft: 0 }}
                 />
 
                 <RadioListItem
                     title={"Item E"}
                     value={selectedItem === "E"}
                     onPress={() => setSelectedItem("E")}
-                    style={{ backgroundColor: "transparent" }}
+                    style={{ backgroundColor: "transparent", paddingLeft: 0 }}
                 />
 
                 <RadioListItem
                     title={"Item F"}
                     value={selectedItem === "F"}
                     onPress={() => setSelectedItem("F")}
-                    style={{ backgroundColor: "transparent" }}
+                    style={{ backgroundColor: "transparent", paddingLeft: 0 }}
                 />
             </ModalContent>
 
