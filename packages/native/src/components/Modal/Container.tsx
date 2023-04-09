@@ -19,7 +19,7 @@ export interface ModalContainerProps extends TouchableOpacityProps {
 export const defaultModalContainerMinWidth = 280
 export const defaultModalContainerMaxWidth = 560
 export const defaultModalContainerMaxHeight = 560
-export const defaultModalContainerEdgeMargin = 56
+export const defaultModalContainerEdgeMargin = 48
 export const defaultModalContainerPadding = 24
 
 
@@ -78,6 +78,7 @@ const styles = StyleSheet.create({
     container: {
         minWidth: defaultModalContainerMinWidth,
         maxWidth: defaultModalContainerMaxWidth,
+        width: "100%",
         maxHeight: defaultModalContainerMaxHeight,
         padding: defaultModalContainerPadding,
     },
