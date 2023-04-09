@@ -13,11 +13,20 @@ type PressableStyleProp = StyleProp<ViewStyle>
     | ((state: PressableStateCallbackType) => StyleProp<ViewStyle>)
     | undefined
 
+type AnyStyle = {
+    [key: string]: unknown;
+}
 
-function processStyle(style: PressableStyleProp) {
-    const viewStyle: ViewStyle = {}
-    const pressableStyle: ViewStyle = {}
-    let styleObject: ViewStyle = {}
+interface ProcessedStyle {
+    viewStyle: ViewStyle;
+    pressableStyle: ViewStyle;
+}
+
+
+function processStyle(style: PressableStyleProp): ProcessedStyle {
+    const viewStyle: AnyStyle = {}
+    const pressableStyle: AnyStyle = {}
+    let styleObject: AnyStyle = {}
 
     if (style === undefined) return { viewStyle, pressableStyle }
 
@@ -25,10 +34,10 @@ function processStyle(style: PressableStyleProp) {
         style = style({ pressed: false })
     }
     if (typeof style === "object") {
-        styleObject = StyleSheet.flatten(style)
+        styleObject = StyleSheet.flatten(style) as AnyStyle
     }
 
-    const keys = Object.keys(styleObject) as (keyof ViewStyle)[]
+    const keys = Object.keys(styleObject) as string[]
     keys.forEach(key => {
         const includesPadding = key.toLowerCase().includes("padding")
         const includesMargin = key.toLowerCase().includes("margin")
