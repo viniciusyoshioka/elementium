@@ -9,6 +9,7 @@ export type DividerVariant = "horizontal" | "vertical"
 export interface DividerProps {
     variant?: DividerVariant;
     style?: StyleProp<ViewStyle>;
+    wrapperStyle?: StyleProp<ViewStyle>;
 }
 
 
@@ -24,17 +25,21 @@ export function Divider(props: DividerProps) {
 
     if (props.variant === "vertical") {
         return (
-            <View
-                style={[styles.dividerVertical, dividerColorStyle, style]}
-            />
+            <View style={props.wrapperStyle}>
+                <View
+                    style={[styles.dividerVertical, dividerColorStyle, style]}
+                />
+            </View>
         )
     }
 
 
     return (
-        <View
-            style={[styles.dividerHorizontal, dividerColorStyle, style]}
-        />
+        <View style={props.wrapperStyle}>
+            <View
+                style={[styles.dividerHorizontal, dividerColorStyle, style]}
+            />
+        </View>
     )
 }
 
