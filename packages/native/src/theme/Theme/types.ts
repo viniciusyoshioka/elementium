@@ -4,6 +4,7 @@ export interface Color {
     onPrimary: string;
     primaryContainer: string;
     onPrimaryContainer: string;
+    inversePrimary: string;
 
     secondary: string;
     onSecondary: string;
@@ -27,6 +28,15 @@ export interface Color {
     onSurface: string;
     surfaceVariant: string;
     onSurfaceVariant: string;
+    surfaceDim: string;
+    surfaceBright: string;
+    surfaceContainerLowest: string;
+    surfaceContainerLow: string;
+    surfaceContainer: string;
+    surfaceContainerHigh: string;
+    surfaceContainerHighest: string;
+    inverseSurface: string;
+    inverseOnSurface: string;
 
     outline: string;
     outlineVariant: string;
