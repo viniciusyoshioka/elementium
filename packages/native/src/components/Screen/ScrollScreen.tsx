@@ -1,4 +1,4 @@
-import { ScrollView, ScrollViewProps, StyleSheet } from "react-native"
+import { ScrollView, ScrollViewProps } from "react-native"
 
 import { useTheme } from "../../theme"
 
@@ -14,14 +14,6 @@ export function ScrollScreen(props: ScrollScreenProps) {
         <ScrollView
             {...props}
             style={[ { backgroundColor: color.background }, props.style]}
-            contentContainerStyle={[styles.scrollScreen, props.contentContainerStyle]}
         />
     )
 }
-
-
-const styles = StyleSheet.create({
-    scrollScreen: {
-        alignItems: "center",
-    },
-})
