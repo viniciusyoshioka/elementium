@@ -21,6 +21,7 @@ export function RadioListItem(props: RadioListItemProps) {
                 colors={props.colors}
                 disabled={props.disabled}
                 style={{ marginHorizontal: -10 }}
+                onPress={props.onPress}
             />
         )
     }
