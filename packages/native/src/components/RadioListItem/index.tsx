@@ -1,3 +1,5 @@
+import { StyleSheet } from "react-native"
+
 import { ListItem, ListItemProps, RadioButton, RadioButtonEspecificProps } from ".."
 
 
@@ -30,7 +32,15 @@ export function RadioListItem(props: RadioListItemProps) {
     return (
         <ListItem
             {...props}
+            style={[styles.container, props.style]}
             LeadingComponent={LeadingComponent}
         />
     )
 }
+
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+    },
+})
