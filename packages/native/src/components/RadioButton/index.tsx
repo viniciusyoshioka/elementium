@@ -1,6 +1,6 @@
 import { Color } from "@elementium/color"
 import { useMemo } from "react"
-import { ColorValue, StyleProp, StyleSheet, ViewStyle } from "react-native"
+import { ColorValue, GestureResponderEvent, StyleProp, StyleSheet, ViewStyle } from "react-native"
 
 import { Icon, Pressable, PressableProps } from ".."
 import { useTheme } from "../../theme"
@@ -62,9 +62,12 @@ export function RadioButton(props: RadioButtonProps) {
     }
 
 
-    function onPress() {
+    function onPress(e: GestureResponderEvent) {
         if (props.onValueChange && !props.disabled) {
             props.onValueChange(!props.value)
+        }
+        if (props.onPress) {
+            props.onPress(e)
         }
     }
 
