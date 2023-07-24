@@ -155,7 +155,7 @@ export function ListItem(props: ListItemProps) {
             <View style={[styles.textContainer, textContainerStyle]}>
                 <Title children={props.title} style={{ color: contentColor }} />
 
-                {props.description && (
+                {props.description !== undefined && (
                     <Description
                         children={props.description}
                         style={{ color: contentVariantColor }}
