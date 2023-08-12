@@ -13,10 +13,10 @@
         "src/"
     ],
     "scripts": {
-        "build": "yarn build:commonjs && yarn build:module && yarn build:declarations",
-        "build:commonjs": "tsc -p tsconfig-commonjs.json && babel lib/commonjs-temp --out-dir lib/commonjs --extensions \".js\" --delete-dir-on-start --config-file ./.babelrc-commonjs",
-        "build:module": "babel src --out-dir lib/module --extensions \".ts,.tsx\" --delete-dir-on-start",
-        "build:declarations": "tsc -p tsconfig-declarations.json"
+        "prepack": "yarn prepack:commonjs && yarn prepack:module && yarn prepack:declarations",
+        "prepack:commonjs": "tsc -p tsconfig-commonjs.json && babel lib/commonjs-temp --out-dir lib/commonjs --extensions \".js\" --delete-dir-on-start --config-file ./.babelrc-commonjs",
+        "prepack:module": "babel src --out-dir lib/module --extensions \".ts,.tsx\" --delete-dir-on-start",
+        "prepack:declarations": "tsc -p tsconfig-declarations.json"
     },
     "devDependencies": {
         "@babel/cli": "^7.21.0",
