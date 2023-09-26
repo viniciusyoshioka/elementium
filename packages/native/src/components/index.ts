@@ -1,6 +1,7 @@
 export * from "./Badge"
 export * from "./Button"
 export * from "./Divider"
+export * from "./Header"
 export * from "./Icon"
 export * from "./Input"
 export * from "./ListItem"
