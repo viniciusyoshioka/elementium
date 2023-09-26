@@ -1,0 +1,8 @@
+diff --git a/node_modules/@types/react-native-vector-icons/MaterialIconsOutlined.d.ts b/node_modules/@types/react-native-vector-icons/MaterialIconsOutlined.d.ts
+new file mode 100755
+index 0000000..b4e8bbc
+--- /dev/null
++++ b/node_modules/@types/react-native-vector-icons/MaterialIconsOutlined.d.ts
+@@ -0,0 +1,2 @@
++import { Icon } from './Icon';
++export default Icon;
