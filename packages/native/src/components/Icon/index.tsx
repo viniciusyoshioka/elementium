@@ -2,9 +2,10 @@ import { ColorValue, TextProps } from "react-native"
 import Ionicons from "react-native-vector-icons/Ionicons"
 import MaterialCommunity from "react-native-vector-icons/MaterialCommunityIcons"
 import Material from "react-native-vector-icons/MaterialIcons"
+import MaterialOutline from "react-native-vector-icons/MaterialIconsOutlined"
 
 
-export type IconGroup = "material" | "material-community" | "ionicons"
+export type IconGroup = "material" | "material-outline" | "material-community" | "ionicons"
 
 
 export interface LibIconProps extends TextProps {
@@ -36,6 +37,8 @@ function getComponent(group: IconGroup) {
     switch (group) {
         case "material":
             return Material
+        case "material-outline":
+            return MaterialOutline
         case "material-community":
             return MaterialCommunity
         case "ionicons":
