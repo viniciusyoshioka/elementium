@@ -16,6 +16,7 @@
         "eslint-config": "yarn workspace @elementium/eslint-config",
         "eslint-config-typescript": "yarn workspace @elementium/eslint-config-typescript",
         "native": "yarn workspace @elementium/native",
-        "tsconfig": "yarn workspace @elementium/tsconfig"
+        "tsconfig": "yarn workspace @elementium/tsconfig",
+        "prepack": "yarn color prepack && yarn native prepack"
     }
 }
