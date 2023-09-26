@@ -37,7 +37,7 @@
         "react": "18.2.0",
         "react-native": "0.71.3",
         "react-native-builder-bob": "^0.20.3",
-        "react-native-vector-icons": "^9.2.0",
+        "react-native-vector-icons": "https://github.com/viniciusyoshioka/react-native-vector-icons",
         "typescript": "^4.9.5"
     },
     "react-native-builder-bob": {
