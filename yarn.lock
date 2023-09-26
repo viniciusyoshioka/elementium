@@ -5096,6 +5096,13 @@ react-native-vector-icons@^9.2.0:
     prop-types "^15.7.2"
     yargs "^16.1.1"
 
+"react-native-vector-icons@https://github.com/viniciusyoshioka/react-native-vector-icons":
+  version "10.0.0"
+  resolved "https://github.com/viniciusyoshioka/react-native-vector-icons#155523f6df0338e0ba9b0cdb05b0825530dcc076"
+  dependencies:
+    prop-types "^15.7.2"
+    yargs "^16.1.1"
+
 react-native@0.71.3:
   version "0.71.3"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.71.3.tgz#0faab799c49e61ba12df9e6525c3ac7d595d673c"

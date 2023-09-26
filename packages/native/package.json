@@ -20,7 +20,7 @@
         "react": "*",
         "react-native": "*",
         "react-native-gesture-handler": "^2.9.0",
-        "react-native-vector-icons": "*"
+        "react-native-vector-icons": "https://github.com/viniciusyoshioka/react-native-vector-icons"
     },
     "devDependencies": {
         "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
