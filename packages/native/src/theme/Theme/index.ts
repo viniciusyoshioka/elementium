@@ -1,5 +1,4 @@
 export * from "./dark"
 export * from "./light"
 export * from "./provider"
-export * from "./StatusBar"
 export * from "./types"
