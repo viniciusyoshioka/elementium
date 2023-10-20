@@ -1,36 +1,18 @@
-import { ColorValue, TextProps } from "react-native"
-import Ionicons from "react-native-vector-icons/Ionicons"
+import { IconProps as VectorIconProps } from "react-native-vector-icons/Icon"
 import MaterialCommunity from "react-native-vector-icons/MaterialCommunityIcons"
 import Material from "react-native-vector-icons/MaterialIcons"
 import MaterialOutline from "react-native-vector-icons/MaterialIconsOutlined"
 
 
-export type IconGroup = "material" | "material-outline" | "material-community" | "ionicons"
+export type IconGroup = "material" | "material-outline" | "material-community"
 
 
-export interface LibIconProps extends TextProps {
-    name: string;
-    size?: number;
-    color?: string | ColorValue;
+export interface IconProps extends VectorIconProps {
+    group?: IconGroup
 }
 
 
-export interface IconProps extends LibIconProps {
-    group?: IconGroup;
-}
-
-
-export interface ExtendableIconProps extends TextProps {
-    iconName: string;
-    iconSize?: number;
-    iconColor?: string | ColorValue;
-    iconGroup?: IconGroup;
-}
-
-
-export interface ExtendableOptionalIconProps extends Omit<ExtendableIconProps, "iconName"> {
-    iconName?: string;
-}
+export interface OptionalIconProps extends Partial<IconProps> {}
 
 
 function getComponent(group: IconGroup) {
@@ -41,32 +23,23 @@ function getComponent(group: IconGroup) {
             return MaterialOutline
         case "material-community":
             return MaterialCommunity
-        case "ionicons":
-            return Ionicons
         default:
-            console.warn(`Invalid icon group: "${group}". Using "material" as default.`)
-            return Material
+            console.warn(`Invalid icon group: "${group}". Using "material-community" as default.`)
+            return MaterialCommunity
     }
 }
-
-
-export const defaultIconGroup: IconGroup = "material"
-export const defaultIconSize = 24
-export const defaultIconColor: string | ColorValue = "black"
 
 
 export function Icon(props: IconProps) {
 
 
-    const BaseComponent = getComponent(props.group ?? defaultIconGroup)
+    const BaseComponent = getComponent(props.group ?? "material-community")
 
 
     return (
         <BaseComponent
-            name={props.name}
-            size={props.size ?? defaultIconSize}
-            color={props.color ?? defaultIconColor}
-            style={props.style}
+            {...props}
+            size={props.size ?? 24}
         />
     )
 }
