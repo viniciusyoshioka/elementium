@@ -16,7 +16,7 @@
         "prepack": "bob build"
     },
     "peerDependencies": {
-        "@elementium/color": "*",
+        "@elementium/color": "^1.0.0",
         "react": "*",
         "react-native": "*",
         "react-native-paper": "^5.11.0",
