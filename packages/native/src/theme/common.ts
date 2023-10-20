@@ -1,7 +1,7 @@
-import { CommonThemeType } from "./types"
+import { ElementiumCommonThemeType } from "./types"
 
 
-export const CommonTheme: CommonThemeType = {
+export const ElementiumCommonTheme: ElementiumCommonThemeType = {
     elevation: {
         level0: 0,
         level1: 1,

@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native"
 
 import { Text, TextProps } from "../../"
-import { useTheme } from "../../../theme"
+import { useElementiumTheme } from "../../../theme"
 
 
 export interface HeaderTitleProps extends TextProps {
@@ -12,7 +12,7 @@ export interface HeaderTitleProps extends TextProps {
 export function HeaderTitle(props: HeaderTitleProps) {
 
 
-    const { color } = useTheme()
+    const { color } = useElementiumTheme()
 
 
     return (

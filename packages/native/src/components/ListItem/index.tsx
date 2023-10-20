@@ -3,7 +3,7 @@ import { ComponentType, ReactElement, useCallback, useMemo, useState } from "rea
 import { ColorValue, StyleProp, StyleSheet, View, ViewStyle } from "react-native"
 
 import { ExtendableIconProps, Icon, Pressable, PressableProps, Text } from ".."
-import { useTheme } from "../../theme"
+import { useElementiumTheme } from "../../theme"
 import { Description } from "./Description"
 import { Title } from "./Title"
 
@@ -28,7 +28,7 @@ export interface ListItemProps extends PressableProps {
 export function ListItem(props: ListItemProps) {
 
 
-    const { color, state } = useTheme()
+    const { color, state } = useElementiumTheme()
 
     const [threeLinesDescription, setThreeLinesDescription] = useState<boolean>()
 

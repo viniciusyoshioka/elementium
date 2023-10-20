@@ -8,7 +8,7 @@ import {
     useWindowDimensions
 } from "react-native"
 
-import { useTheme } from "../../theme"
+import { useElementiumTheme } from "../../theme"
 
 
 export interface ModalContainerProps extends TouchableOpacityProps {
@@ -27,7 +27,7 @@ export function ModalContainer(props: ModalContainerProps) {
 
 
     const { width, height } = useWindowDimensions()
-    const { color, elevation, shape } = useTheme()
+    const { color, elevation, shape } = useElementiumTheme()
 
 
     const containerStyle: ViewStyle = {

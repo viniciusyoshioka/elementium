@@ -2,7 +2,7 @@ import { Color } from "@elementium/color"
 import { PressableProps, StyleProp, StyleSheet, ViewStyle } from "react-native"
 
 import { ExtendableIconProps, Icon, Pressable } from "../../"
-import { useTheme } from "../../../theme"
+import { useElementiumTheme } from "../../../theme"
 
 
 export const HEADER_BUTTON_SIZE = 48
@@ -23,7 +23,7 @@ export interface HeaderButtonProps extends OmittedPressableProps, OmittedIconPro
 export function HeaderButton(props: HeaderButtonProps) {
 
 
-    const { color, state } = useTheme()
+    const { color, state } = useElementiumTheme()
 
 
     const colorStyle = props.iconColor ?? color.onSurface

@@ -2,7 +2,7 @@ import { ForwardedRef, forwardRef, useImperativeHandle } from "react"
 import { StyleSheet } from "react-native"
 import Reanimated, { useAnimatedStyle, useSharedValue } from "react-native-reanimated"
 
-import { useTheme } from "../../../theme"
+import { useElementiumTheme } from "../../../theme"
 import { Header, HeaderProps } from "../Header"
 
 
@@ -17,7 +17,7 @@ export type AnimatedHeaderRef = {
 export const AnimatedHeader = forwardRef((props: HeaderProps, ref: ForwardedRef<AnimatedHeaderRef>) => {
 
 
-    const { color } = useTheme()
+    const { color } = useElementiumTheme()
 
     const flattenStyle = StyleSheet.flatten(props.style)
     const backgroundColor = useSharedValue(flattenStyle?.backgroundColor ?? color.surface)

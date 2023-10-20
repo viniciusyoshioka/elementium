@@ -1,7 +1,7 @@
 import React, { Children, ForwardedRef, cloneElement, forwardRef } from "react"
 import { StatusBar, StyleProp, StyleSheet, View, ViewProps, ViewStyle } from "react-native"
 
-import { useTheme } from "../../../theme"
+import { useElementiumTheme } from "../../../theme"
 import { HeaderButton, HeaderButtonProps } from "../Button"
 import { HeaderTitle, HeaderTitleProps } from "../Title"
 
@@ -17,7 +17,7 @@ export interface HeaderProps extends ViewProps {
 export const Header = forwardRef((props: HeaderProps, ref: ForwardedRef<unknown>) => {
 
 
-    const { color } = useTheme()
+    const { color } = useElementiumTheme()
 
     const flattenStyle = StyleSheet.flatten(props.style)
     const overrideStatusBarStyle: ViewStyle = {

@@ -1,7 +1,7 @@
 import { StyleSheet, View } from "react-native"
 
 import { Text, TextProps } from ".."
-import { useTheme } from "../../theme"
+import { useElementiumTheme } from "../../theme"
 
 
 export interface ModalDescriptionProps extends TextProps {}
@@ -9,7 +9,7 @@ export interface ModalDescriptionProps extends TextProps {}
 
 export function ModalDescription(props: ModalDescriptionProps) {
 
-    const { color } = useTheme()
+    const { color } = useElementiumTheme()
 
     return (
         <View style={styles.wrapper}>

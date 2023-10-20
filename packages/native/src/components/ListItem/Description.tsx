@@ -1,7 +1,7 @@
 import { LayoutChangeEvent } from "react-native"
 
 import { Text, TextProps } from ".."
-import { TypographySize, TypographyVariant, useTheme } from "../../theme"
+import { TypographySize, TypographyVariant, useElementiumTheme } from "../../theme"
 
 
 const variant: TypographyVariant = "body"
@@ -16,7 +16,7 @@ export interface DescriptionProps extends TextProps {
 export function Description(props: DescriptionProps) {
 
 
-    const { typography } = useTheme()
+    const { typography } = useElementiumTheme()
 
 
     function onLayout(event: LayoutChangeEvent) {

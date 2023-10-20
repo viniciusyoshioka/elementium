@@ -106,7 +106,7 @@ export type Typography = {
 }
 
 
-export interface CommonThemeType {
+export interface ElementiumCommonThemeType {
     elevation: Elevation
     shape: Shape
     state: SurfaceStates
@@ -114,7 +114,7 @@ export interface CommonThemeType {
 }
 
 
-export interface ThemeType extends CommonThemeType {
+export interface ElementiumThemeType extends ElementiumCommonThemeType {
     isDark: boolean
     color: Color
 }

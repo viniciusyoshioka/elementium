@@ -1,7 +1,7 @@
 import { TextStyle } from "react-native"
 
 import { Text, TextProps } from ".."
-import { useTheme } from "../../theme"
+import { useElementiumTheme } from "../../theme"
 
 
 export interface ModalTitleProps extends TextProps {
@@ -12,7 +12,7 @@ export interface ModalTitleProps extends TextProps {
 export function ModalTitle(props: ModalTitleProps) {
 
 
-    const { color } = useTheme()
+    const { color } = useElementiumTheme()
 
 
     const titleWithIconStyle: TextStyle | undefined = props.hasIconAbove

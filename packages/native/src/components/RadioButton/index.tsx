@@ -3,7 +3,7 @@ import { useMemo } from "react"
 import { ColorValue, GestureResponderEvent, StyleProp, StyleSheet, ViewStyle } from "react-native"
 
 import { Icon, Pressable, PressableProps } from ".."
-import { useTheme } from "../../theme"
+import { useElementiumTheme } from "../../theme"
 
 
 export interface RadioButtonColors {
@@ -26,7 +26,7 @@ export interface RadioButtonProps extends Omit<PressableProps, "style">, RadioBu
 export function RadioButton(props: RadioButtonProps) {
 
 
-    const { color, state } = useTheme()
+    const { color, state } = useElementiumTheme()
 
     const style = StyleSheet.flatten(props.style)
     const checkedColor = props.colors?.checked ?? color.primary

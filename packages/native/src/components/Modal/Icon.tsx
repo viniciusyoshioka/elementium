@@ -1,7 +1,7 @@
 import { StyleSheet, View } from "react-native"
 
 import { Icon, IconProps } from ".."
-import { useTheme } from "../../theme"
+import { useElementiumTheme } from "../../theme"
 
 
 export interface ModalIconProps extends IconProps {}
@@ -9,7 +9,7 @@ export interface ModalIconProps extends IconProps {}
 
 export function ModalIcon(props: ModalIconProps) {
 
-    const { color } = useTheme()
+    const { color } = useElementiumTheme()
 
     return (
         <View style={styles.wrapper}>

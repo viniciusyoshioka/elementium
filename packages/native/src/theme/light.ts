@@ -1,9 +1,9 @@
-import { ThemeType } from "."
-import { CommonTheme } from "./common"
+import { ElementiumCommonTheme } from "./common"
+import { ElementiumThemeType } from "./types"
 
 
-export const LightTheme: ThemeType = {
-    ...CommonTheme,
+export const ElementiumLightTheme: ElementiumThemeType = {
+    ...ElementiumCommonTheme,
     isDark: false,
     color: {
         primary: "#6750a4ff",

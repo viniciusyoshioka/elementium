@@ -1,7 +1,7 @@
-import { ThemeType } from "@elementium/native"
+import { ElementiumThemeType } from "@elementium/native"
 
 
-export interface AppThemeType extends ThemeType {
+export interface AppThemeType extends ElementiumThemeType {
     name: string;
     switchTheme: () => void;
 }

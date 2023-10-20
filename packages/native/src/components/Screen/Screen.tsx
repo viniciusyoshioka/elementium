@@ -1,6 +1,6 @@
 import { StyleSheet, View, ViewProps } from "react-native"
 
-import { useTheme } from "../../theme"
+import { useElementiumTheme } from "../../theme"
 
 
 export interface ScreenProps extends ViewProps {}
@@ -8,7 +8,7 @@ export interface ScreenProps extends ViewProps {}
 
 export function Screen(props: ScreenProps) {
 
-    const { color } = useTheme()
+    const { color } = useElementiumTheme()
 
     return (
         <View

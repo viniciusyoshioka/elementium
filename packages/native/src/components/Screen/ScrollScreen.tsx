@@ -1,6 +1,6 @@
 import { ScrollView, ScrollViewProps } from "react-native"
 
-import { useTheme } from "../../theme"
+import { useElementiumTheme } from "../../theme"
 
 
 export interface ScrollScreenProps extends ScrollViewProps {}
@@ -8,7 +8,7 @@ export interface ScrollScreenProps extends ScrollViewProps {}
 
 export function ScrollScreen(props: ScrollScreenProps) {
 
-    const { color } = useTheme()
+    const { color } = useElementiumTheme()
 
     return (
         <ScrollView
