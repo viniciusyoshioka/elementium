@@ -38,7 +38,7 @@ export function Router() {
                             style={{ marginRight: 16 }}
                         >
                             <Icon
-                                name={"brightness-medium"}
+                                name={"brightness-6"}
                                 color={props.tintColor}
                             />
                         </Pressable>
