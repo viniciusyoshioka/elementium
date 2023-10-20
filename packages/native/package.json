@@ -19,7 +19,6 @@
         "@elementium/color": "*",
         "react": "*",
         "react-native": "*",
-        "react-native-gesture-handler": "^2.9.0",
         "react-native-paper": "^5.11.0",
         "react-native-vector-icons": "https://github.com/viniciusyoshioka/react-native-vector-icons"
     },
