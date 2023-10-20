@@ -1,6 +1,7 @@
 import { DarkTheme, LightTheme, ThemeProvider } from "@elementium/native"
 import { useState } from "react"
 import { useColorScheme } from "react-native"
+import { MD3DarkTheme, MD3LightTheme, PaperProvider } from "react-native-paper"
 
 import { useKeepAwakeOnDev } from "@hooks"
 import { Router } from "@router"
@@ -35,9 +36,11 @@ export function App() {
 
     return (
         <ThemeProvider value={isDarkTheme ? DarkTheme : LightTheme}>
-            <AppThemeProvider value={getTheme()}>
-                <Router />
-            </AppThemeProvider>
+            <PaperProvider theme={isDarkTheme ? MD3DarkTheme : MD3LightTheme}>
+                <AppThemeProvider value={getTheme()}>
+                    <Router />
+                </AppThemeProvider>
+            </PaperProvider>
         </ThemeProvider>
     )
 }
