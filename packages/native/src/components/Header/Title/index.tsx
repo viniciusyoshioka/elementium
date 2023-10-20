@@ -5,7 +5,7 @@ import { useTheme } from "../../../theme"
 
 
 export interface HeaderTitleProps extends TextProps {
-    title?: string;
+    title?: string
 }
 
 

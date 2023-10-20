@@ -5,7 +5,7 @@ import { useTheme } from "../../theme"
 
 
 export interface ModalTitleProps extends TextProps {
-    hasIconAbove?: boolean;
+    hasIconAbove?: boolean
 }
 
 

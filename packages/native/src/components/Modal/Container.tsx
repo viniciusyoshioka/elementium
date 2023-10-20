@@ -4,15 +4,15 @@ import {
     StyleSheet,
     TouchableOpacity,
     TouchableOpacityProps,
-    useWindowDimensions,
-    ViewStyle
+    ViewStyle,
+    useWindowDimensions
 } from "react-native"
 
 import { useTheme } from "../../theme"
 
 
 export interface ModalContainerProps extends TouchableOpacityProps {
-    hasTintColor?: boolean;
+    hasTintColor?: boolean
 }
 
 

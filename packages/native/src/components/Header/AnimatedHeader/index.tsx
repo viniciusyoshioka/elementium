@@ -10,7 +10,7 @@ const AnimatedHeaderBase = Reanimated.createAnimatedComponent(Header)
 
 
 export type AnimatedHeaderRef = {
-    setBackgroundColor: (color: string) => void;
+    setBackgroundColor: (color: string) => void
 }
 
 

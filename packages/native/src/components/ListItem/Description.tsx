@@ -9,7 +9,7 @@ const size: TypographySize = "medium"
 
 
 export interface DescriptionProps extends TextProps {
-    onViewHeightChange?: (isTallerThanLineHeight: boolean) => void;
+    onViewHeightChange?: (isTallerThanLineHeight: boolean) => void
 }
 
 

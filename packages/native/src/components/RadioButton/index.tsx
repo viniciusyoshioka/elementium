@@ -7,16 +7,16 @@ import { useTheme } from "../../theme"
 
 
 export interface RadioButtonColors {
-    checked: ColorValue;
-    unchecked: ColorValue;
+    checked: ColorValue
+    unchecked: ColorValue
 }
 
 
 export interface RadioButtonEspecificProps {
-    value?: boolean;
-    onValueChange?: (value: boolean) => void;
-    colors?: RadioButtonColors;
-    style?: StyleProp<ViewStyle>;
+    value?: boolean
+    onValueChange?: (value: boolean) => void
+    colors?: RadioButtonColors
+    style?: StyleProp<ViewStyle>
 }
 
 

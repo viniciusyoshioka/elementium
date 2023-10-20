@@ -1,88 +1,88 @@
 
 export interface Color {
-    primary: string;
-    onPrimary: string;
-    primaryContainer: string;
-    onPrimaryContainer: string;
-    inversePrimary: string;
+    primary: string
+    onPrimary: string
+    primaryContainer: string
+    onPrimaryContainer: string
+    inversePrimary: string
 
-    secondary: string;
-    onSecondary: string;
-    secondaryContainer: string;
-    onSecondaryContainer: string;
+    secondary: string
+    onSecondary: string
+    secondaryContainer: string
+    onSecondaryContainer: string
 
-    tertiary: string;
-    onTertiary: string;
-    tertiaryContainer: string;
-    onTertiaryContainer: string;
+    tertiary: string
+    onTertiary: string
+    tertiaryContainer: string
+    onTertiaryContainer: string
 
-    error: string;
-    onError: string;
-    errorContainer: string;
-    onErrorContainer: string;
+    error: string
+    onError: string
+    errorContainer: string
+    onErrorContainer: string
 
-    background: string;
-    onBackground: string;
+    background: string
+    onBackground: string
 
-    surface: string;
-    onSurface: string;
-    surfaceVariant: string;
-    onSurfaceVariant: string;
-    surfaceDim: string;
-    surfaceBright: string;
-    surfaceContainerLowest: string;
-    surfaceContainerLow: string;
-    surfaceContainer: string;
-    surfaceContainerHigh: string;
-    surfaceContainerHighest: string;
-    inverseSurface: string;
-    inverseOnSurface: string;
+    surface: string
+    onSurface: string
+    surfaceVariant: string
+    onSurfaceVariant: string
+    surfaceDim: string
+    surfaceBright: string
+    surfaceContainerLowest: string
+    surfaceContainerLow: string
+    surfaceContainer: string
+    surfaceContainerHigh: string
+    surfaceContainerHighest: string
+    inverseSurface: string
+    inverseOnSurface: string
 
-    outline: string;
-    outlineVariant: string;
+    outline: string
+    outlineVariant: string
 }
 
 
 export interface Elevation {
-    level0: number;
-    level1: number;
-    level2: number;
-    level3: number;
-    level4: number;
-    level5: number;
-    opacityLevel0: number;
-    opacityLevel1: number;
-    opacityLevel2: number;
-    opacityLevel3: number;
-    opacityLevel4: number;
-    opacityLevel5: number;
+    level0: number
+    level1: number
+    level2: number
+    level3: number
+    level4: number
+    level5: number
+    opacityLevel0: number
+    opacityLevel1: number
+    opacityLevel2: number
+    opacityLevel3: number
+    opacityLevel4: number
+    opacityLevel5: number
 }
 
 
 export interface Shape {
-    none: number;
-    extraSmall: number;
-    small: number;
-    medium: number;
-    large: number;
-    extraLarge: number;
-    full: number;
+    none: number
+    extraSmall: number
+    small: number
+    medium: number
+    large: number
+    extraLarge: number
+    full: number
 }
 
 
 export type InteractionState = "enabled" | "disabled" | "hover" | "pressed" | "dragged" | "focused"
 
 export interface OpacityState {
-    disabled: number;
-    hover: number;
-    pressed: number;
-    dragged: number;
-    focused: number;
+    disabled: number
+    hover: number
+    pressed: number
+    dragged: number
+    focused: number
 }
 
 export interface SurfaceStates {
-    container: OpacityState;
-    content: OpacityState;
+    container: OpacityState
+    content: OpacityState
 }
 
 
@@ -93,28 +93,28 @@ export type TypographySize = "large" | "medium" | "small"
 export type TypographyWeight = "normal" | "bold" | "100" | "200" | "300" | "400" | "500" | "600" | "700" | "800" | "900"
 
 export interface TypographyStyle {
-    fontSize: number;
-    fontWeight: TypographyWeight;
-    lineHeight: number;
-    letterSpacing: number;
+    fontSize: number
+    fontWeight: TypographyWeight
+    lineHeight: number
+    letterSpacing: number
 }
 
 export type Typography = {
     [variant in TypographyVariant]: {
-        [size in TypographySize]: TypographyStyle;
-    };
+        [size in TypographySize]: TypographyStyle
+    }
 }
 
 
 export interface CommonThemeType {
     elevation: Elevation
-    shape: Shape;
-    state: SurfaceStates;
-    typography: Typography;
+    shape: Shape
+    state: SurfaceStates
+    typography: Typography
 }
 
 
 export interface ThemeType extends CommonThemeType {
-    isDark: boolean;
-    color: Color;
+    isDark: boolean
+    color: Color
 }

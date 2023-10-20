@@ -9,9 +9,9 @@ import { ModalContainer, ModalScrim } from "."
 
 
 export interface ModalProps extends RNModalProps {
-    scrimStyle?: StyleProp<ViewStyle>;
-    containerStyle?: StyleProp<ViewStyle>;
-    hasTintColor?: boolean;
+    scrimStyle?: StyleProp<ViewStyle>
+    containerStyle?: StyleProp<ViewStyle>
+    hasTintColor?: boolean
 }
 
 

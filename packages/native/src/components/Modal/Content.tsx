@@ -4,7 +4,7 @@ import { Divider } from ".."
 
 
 export interface ModalContentProps extends ScrollViewProps {
-    hasDivider?: boolean;
+    hasDivider?: boolean
 }
 
 

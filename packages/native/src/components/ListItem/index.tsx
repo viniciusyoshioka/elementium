@@ -9,19 +9,19 @@ import { Title } from "./Title"
 
 
 export interface ListItemProps extends PressableProps {
-    title: string;
-    description?: string;
+    title: string
+    description?: string
 
-    leadingIcon?: ExtendableIconProps;
-    LeadingComponent?: ReactElement | ComponentType<unknown>;
+    leadingIcon?: ExtendableIconProps
+    LeadingComponent?: ReactElement | ComponentType<unknown>
 
-    trailingText?: string;
-    trailingIcon?: ExtendableIconProps;
-    TrailingComponent?: ReactElement | ComponentType<unknown>;
+    trailingText?: string
+    trailingIcon?: ExtendableIconProps
+    TrailingComponent?: ReactElement | ComponentType<unknown>
 
-    disabled?: boolean;
-    alignOnCenterInThreeLines?: boolean;
-    style?: StyleProp<ViewStyle>;
+    disabled?: boolean
+    alignOnCenterInThreeLines?: boolean
+    style?: StyleProp<ViewStyle>
 }
 
 

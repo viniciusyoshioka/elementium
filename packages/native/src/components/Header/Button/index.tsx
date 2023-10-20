@@ -16,7 +16,7 @@ type PropsToOmitFromIcon = "children" | "style" | "disabled" | "onPress" | "onPr
 type OmittedIconProps = Omit<ExtendableIconProps, PropsToOmitFromIcon>
 
 export interface HeaderButtonProps extends OmittedPressableProps, OmittedIconProps {
-    style?: StyleProp<ViewStyle>;
+    style?: StyleProp<ViewStyle>
 }
 
 

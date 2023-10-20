@@ -1,7 +1,7 @@
 import {
-    Pressable as RNPressble,
-    PressableProps as RNPressableProps,
     PressableStateCallbackType,
+    PressableProps as RNPressableProps,
+    Pressable as RNPressble,
     StyleProp,
     StyleSheet,
     View,
@@ -14,12 +14,12 @@ type PressableStyleProp = StyleProp<ViewStyle>
     | undefined
 
 type AnyStyle = {
-    [key: string]: unknown;
+    [key: string]: unknown
 }
 
 interface ProcessedStyle {
-    viewStyle: ViewStyle;
-    pressableStyle: ViewStyle;
+    viewStyle: ViewStyle
+    pressableStyle: ViewStyle
 }
 
 

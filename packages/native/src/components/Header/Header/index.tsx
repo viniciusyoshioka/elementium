@@ -10,7 +10,7 @@ export const HEADER_HEIGHT = 56
 
 
 export interface HeaderProps extends ViewProps {
-    overrideStatusBar?: boolean;
+    overrideStatusBar?: boolean
 }
 
 
