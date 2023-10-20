@@ -152,5 +152,5 @@ export type ColorName = "aliceblue"
 
 
 export type CssColorMap = {
-    [key in ColorName]: string;
+    [key in ColorName]: string
 }
