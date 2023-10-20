@@ -3,16 +3,11 @@ import { createDrawerNavigator } from "@react-navigation/drawer"
 import { NavigationContainer } from "@react-navigation/native"
 import { Pressable, StatusBar } from "react-native"
 
-import { BadgeScreen } from "@screens/Badge"
-import { ButtonScreen } from "@screens/Button"
-import { DividerScreen } from "@screens/Divider"
 import { IconScreen } from "@screens/Icon"
 import { InputScreen } from "@screens/Input"
 import { ListItemScreen } from "@screens/ListItem"
-import { MenuScreen } from "@screens/Menu"
 import { ModalScreen } from "@screens/Modal"
 import { RadioButtonScreen } from "@screens/RadioButton"
-import { TextScreen } from "@screens/Text"
 import { useAppTheme } from "@theme"
 
 
@@ -55,16 +50,11 @@ export function Router() {
                     sceneContainerStyle: { backgroundColor: color.background },
                 }}
             >
-                <Drawer.Screen name={"Badge"} component={BadgeScreen} />
-                <Drawer.Screen name={"Button"} component={ButtonScreen} />
-                <Drawer.Screen name={"Divider"} component={DividerScreen} />
                 <Drawer.Screen name={"Icon"} component={IconScreen} />
                 <Drawer.Screen name={"Input"} component={InputScreen} />
                 <Drawer.Screen name={"ListItem"} component={ListItemScreen} />
-                <Drawer.Screen name={"Menu"} component={MenuScreen} />
                 <Drawer.Screen name={"Modal"} component={ModalScreen} />
                 <Drawer.Screen name={"RadioButton"} component={RadioButtonScreen} />
-                <Drawer.Screen name={"Text"} component={TextScreen} />
             </Drawer.Navigator>
         </NavigationContainer>
     )
