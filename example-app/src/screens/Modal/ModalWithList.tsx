@@ -1,6 +1,6 @@
-import { Modal, ModalProps, RadioListItem } from "@elementium/native"
+import { Modal, ModalProps } from "@elementium/native"
 import { useState } from "react"
-import { Button } from "react-native-paper"
+import { Button, RadioButton } from "react-native-paper"
 
 
 export interface ModalWithListProps extends ModalProps {}
@@ -27,47 +27,46 @@ export function ModalWithList(props: ModalWithListProps) {
             </Modal.Description>
 
             <Modal.Content>
-                <RadioListItem
-                    title={"Item A"}
-                    value={selectedItem === "A"}
-                    onPress={() => setSelectedItem("A")}
-                    style={{ backgroundColor: "transparent", paddingLeft: 24 }}
-                />
+                <RadioButton.Group
+                    value={selectedItem}
+                    onValueChange={newValue => setSelectedItem(newValue)}
+                >
+                    <RadioButton.Item
+                        label={"Item A"}
+                        value={"A"}
+                        style={{ paddingLeft: 24 }}
+                    />
 
-                <RadioListItem
-                    title={"Item B"}
-                    value={selectedItem === "B"}
-                    onPress={() => setSelectedItem("B")}
-                    style={{ backgroundColor: "transparent", paddingLeft: 24 }}
-                />
+                    <RadioButton.Item
+                        label={"Item B"}
+                        value={"B"}
+                        style={{ paddingLeft: 24 }}
+                    />
 
-                <RadioListItem
-                    title={"Item C"}
-                    value={selectedItem === "C"}
-                    onPress={() => setSelectedItem("C")}
-                    style={{ backgroundColor: "transparent", paddingLeft: 24 }}
-                />
+                    <RadioButton.Item
+                        label={"Item C"}
+                        value={"C"}
+                        style={{ paddingLeft: 24 }}
+                    />
 
-                <RadioListItem
-                    title={"Item D"}
-                    value={selectedItem === "D"}
-                    onPress={() => setSelectedItem("D")}
-                    style={{ backgroundColor: "transparent", paddingLeft: 24 }}
-                />
+                    <RadioButton.Item
+                        label={"Item D"}
+                        value={"D"}
+                        style={{ paddingLeft: 24 }}
+                    />
 
-                <RadioListItem
-                    title={"Item E"}
-                    value={selectedItem === "E"}
-                    onPress={() => setSelectedItem("E")}
-                    style={{ backgroundColor: "transparent", paddingLeft: 24 }}
-                />
+                    <RadioButton.Item
+                        label={"Item E"}
+                        value={"E"}
+                        style={{ paddingLeft: 24 }}
+                    />
 
-                <RadioListItem
-                    title={"Item F"}
-                    value={selectedItem === "F"}
-                    onPress={() => setSelectedItem("F")}
-                    style={{ backgroundColor: "transparent", paddingLeft: 24 }}
-                />
+                    <RadioButton.Item
+                        label={"Item F"}
+                        value={"F"}
+                        style={{ paddingLeft: 24 }}
+                    />
+                </RadioButton.Group>
             </Modal.Content>
 
             <Modal.Actions>
