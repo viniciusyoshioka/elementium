@@ -1,4 +1,4 @@
-import { ElementiumThemeType } from "@elementium/native"
+import { ElementiumThemeType } from "@elementium/theme"
 
 
 export interface AppThemeType extends ElementiumThemeType {

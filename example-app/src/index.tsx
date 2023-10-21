@@ -1,4 +1,4 @@
-import { ElementiumDarkTheme, ElementiumLightTheme, ElementiumThemeProvider } from "@elementium/native"
+import { ElementiumDarkTheme, ElementiumLightTheme, ElementiumThemeProvider } from "@elementium/theme"
 import { useState } from "react"
 import { useColorScheme } from "react-native"
 import { MD3DarkTheme, MD3LightTheme, PaperProvider } from "react-native-paper"

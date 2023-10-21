@@ -1,4 +1,4 @@
-import { ElementiumDarkTheme } from "@elementium/native"
+import { ElementiumDarkTheme } from "@elementium/theme"
 
 import { AppThemeType } from "./types"
 
