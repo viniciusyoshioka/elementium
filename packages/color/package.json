@@ -1,7 +1,7 @@
 {
     "name": "@elementium/color",
     "description": "Color manipulation library for JavaScript and TypeScript",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "license": "MIT",
     "main": "lib/commonjs/index.js",
     "module": "lib/module/index.js",
