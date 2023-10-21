@@ -1,7 +1,6 @@
 export * from "./Header"
 export * from "./Icon"
 export * from "./Input"
-export * from "./ListItem"
 export * from "./Modal"
 export * from "./Pressable"
 export * from "./Screen"
