@@ -1,10 +1,10 @@
 import { TextStyle } from "react-native"
+import { Text, TextProps } from "react-native-paper"
 
-import { Text, TextProps } from ".."
 import { useElementiumTheme } from "../../theme"
 
 
-export interface ModalTitleProps extends TextProps {
+export interface ModalTitleProps extends TextProps<"headlineSmall"> {
     hasIconAbove?: boolean
 }
 
@@ -15,17 +15,19 @@ export function ModalTitle(props: ModalTitleProps) {
     const { color } = useElementiumTheme()
 
 
-    const titleWithIconStyle: TextStyle | undefined = props.hasIconAbove
-        ? { marginTop: 16, textAlign: "center" }
-        : undefined
+    const titleWithIconStyle: TextStyle = {
+        marginTop: props.hasIconAbove ? 16 : 24,
+        marginHorizontal: 24,
+        textAlign: props.hasIconAbove ? "center" : undefined,
+        color: color.onSurface,
+    }
 
 
     return (
         <Text
-            variant={"headline"}
-            size={"small"}
+            variant={"headlineSmall"}
             {...props}
-            style={[titleWithIconStyle, { color: color.onSurface }, props.style]}
+            style={[titleWithIconStyle, props.style]}
         />
     )
 }

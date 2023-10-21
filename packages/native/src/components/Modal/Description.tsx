@@ -1,23 +1,32 @@
-import { StyleSheet, View } from "react-native"
+import { StyleSheet, TextStyle, View } from "react-native"
+import { Text, TextProps } from "react-native-paper"
 
-import { Text, TextProps } from ".."
 import { useElementiumTheme } from "../../theme"
 
 
-export interface ModalDescriptionProps extends TextProps {}
+export interface ModalDescriptionProps extends TextProps<"bodyMedium"> {}
 
 
 export function ModalDescription(props: ModalDescriptionProps) {
 
+
     const { color } = useElementiumTheme()
+
+
+    const descriptionStyle: TextStyle = {
+        flex: 1,
+        marginTop: 16,
+        marginHorizontal: 24,
+        color: color.onSurfaceVariant,
+    }
+
 
     return (
         <View style={styles.wrapper}>
             <Text
-                variant={"body"}
-                size={"medium"}
+                variant={"bodyMedium"}
                 {...props}
-                style={[styles.description, { color: color.onSurfaceVariant }, props.style]}
+                style={[descriptionStyle, props.style]}
             />
         </View>
     )
@@ -27,9 +36,5 @@ export function ModalDescription(props: ModalDescriptionProps) {
 const styles = StyleSheet.create({
     wrapper: {
         flexDirection: "row",
-    },
-    description: {
-        flex: 1,
-        marginTop: 16,
     },
 })

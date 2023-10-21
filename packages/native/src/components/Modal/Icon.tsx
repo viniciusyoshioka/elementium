@@ -9,7 +9,9 @@ export interface ModalIconProps extends IconProps {}
 
 export function ModalIcon(props: ModalIconProps) {
 
+
     const { color } = useElementiumTheme()
+
 
     return (
         <View style={styles.wrapper}>
@@ -28,5 +30,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "center",
+        marginTop: 24,
+        marginHorizontal: 24,
     },
 })

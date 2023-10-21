@@ -1,6 +1,7 @@
 import { Color, Prisma } from "@elementium/color"
-import { useMemo } from "react"
+import { useState } from "react"
 import {
+    LayoutChangeEvent,
     StyleSheet,
     TouchableOpacity,
     TouchableOpacityProps,
@@ -11,75 +12,69 @@ import {
 import { useElementiumTheme } from "../../theme"
 
 
+const MIN_WIDTH = 280
+const MAX_WIDTH = 560
+const MAX_HEIGHT = 560
+const EDGE_MARGIN = 48
+const PADDING = 24
+
+
 export interface ModalContainerProps extends TouchableOpacityProps {
     hasTintColor?: boolean
 }
 
 
-export const defaultModalContainerMinWidth = 280
-export const defaultModalContainerMaxWidth = 560
-export const defaultModalContainerMaxHeight = 560
-export const defaultModalContainerEdgeMargin = 48
-export const defaultModalContainerPadding = 24
-
-
 export function ModalContainer(props: ModalContainerProps) {
+
+
+    const hasTintColor = props.hasTintColor ?? true
+    const style = StyleSheet.flatten(props.style)
 
 
     const { width, height } = useWindowDimensions()
     const { color, elevation, shape } = useElementiumTheme()
 
+    const [containerHeight, setContainerHeight] = useState<number>()
 
+
+    const minWidth = (width < MIN_WIDTH) ? width : MIN_WIDTH
+    const maxWidth = (width < MAX_WIDTH) ? width : MAX_WIDTH
+    const maxHeight = (height < MAX_HEIGHT) ? height : MAX_HEIGHT
+    const borderRadius = (width < MIN_WIDTH && height <= (containerHeight ?? 0)) ? 0 : shape.extraLarge
     const containerStyle: ViewStyle = {
-        borderRadius: shape.extraLarge,
+        minWidth,
+        maxWidth,
+        maxHeight,
+        borderRadius,
         elevation: elevation.level3,
     }
 
-    const containerSizeStyle: ViewStyle = useMemo(() => {
-        const maxWidthWithinWindow = Math.max(
-            width - (2 * defaultModalContainerEdgeMargin),
-            defaultModalContainerMinWidth
-        )
-        const maxHeightWithinWindow = height - (2 * defaultModalContainerEdgeMargin)
-        const containerWidth = Math.min(maxWidthWithinWindow, defaultModalContainerMaxWidth)
-        const containerHeight = Math.min(maxHeightWithinWindow, defaultModalContainerMaxHeight)
-        return { maxWidth: containerWidth, maxHeight: containerHeight }
-    }, [width, height])
 
-    const style = StyleSheet.flatten(props.style)
-    const hasTintColor = props.hasTintColor ?? true
-    const backgroundColor = (style && style.backgroundColor) ?? color.surface
-    const tintColor = (hasTintColor && color.primary) ?? "transparent"
-    const containerColorStyle: ViewStyle = useMemo(() => {
-        const containerBackgound = new Color(backgroundColor as string)
-        const containerOverlay = new Color(tintColor as string).setA(elevation.opacityLevel3)
-        const newContainerBackground = Prisma.addColors(containerBackgound, containerOverlay).toRgba()
-        return { backgroundColor: newContainerBackground }
-    }, [backgroundColor, tintColor, elevation.opacityLevel3])
+    const backgroundColor = (style && style.backgroundColor) ?? color.surfaceContainerHigh
+    const tintColor = hasTintColor ? color.primary : "transparent"
+    const containerBackgound = new Color(backgroundColor)
+    const containerOverlay = new Color(tintColor).setA(elevation.opacityLevel3)
+    const newContainerBackground = Prisma.addColors(containerBackgound, containerOverlay).toRgba()
+    const containerColorStyle: ViewStyle = { backgroundColor: newContainerBackground }
+
+
+    function onLayout(e: LayoutChangeEvent) {
+        if (containerHeight === undefined) {
+            setContainerHeight(e.nativeEvent.layout.height)
+        }
+
+        if (props.onLayout) {
+            props.onLayout(e)
+        }
+    }
 
 
     return (
         <TouchableOpacity
             activeOpacity={1}
             {...props}
-            style={[
-                styles.container,
-                containerStyle,
-                containerSizeStyle,
-                style,
-                containerColorStyle
-            ]}
+            onLayout={onLayout}
+            style={[containerStyle, style, containerColorStyle]}
         />
     )
 }
-
-
-const styles = StyleSheet.create({
-    container: {
-        minWidth: defaultModalContainerMinWidth,
-        maxWidth: defaultModalContainerMaxWidth,
-        width: "100%",
-        maxHeight: defaultModalContainerMaxHeight,
-        padding: defaultModalContainerPadding,
-    },
-})

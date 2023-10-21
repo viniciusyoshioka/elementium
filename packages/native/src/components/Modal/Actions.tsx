@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "flex-end",
-        marginTop: 24,
+        margin: 24,
         columnGap: 8,
     },
 })

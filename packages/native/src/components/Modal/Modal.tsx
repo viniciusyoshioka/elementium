@@ -5,7 +5,8 @@ import {
     ViewStyle
 } from "react-native"
 
-import { ModalContainer, ModalScrim } from "."
+import { ModalContainer } from "./Container"
+import { ModalScrim } from "./Scrim"
 
 
 export interface ModalProps extends RNModalProps {
