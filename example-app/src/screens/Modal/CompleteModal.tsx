@@ -1,12 +1,5 @@
-import {
-    Button,
-    Modal,
-    ModalActions,
-    ModalDescription,
-    ModalIcon,
-    ModalProps,
-    ModalTitle
-} from "@elementium/native"
+import { Modal, ModalProps } from "@elementium/native"
+import { Button } from "react-native-paper"
 
 
 export interface CompleteModalProps extends ModalProps {}
@@ -14,22 +7,26 @@ export interface CompleteModalProps extends ModalProps {}
 
 export function CompleteModal(props: CompleteModalProps) {
     return (
-        <Modal hasTintColor={true} {...props}>
-            <ModalIcon name={"mobile-friendly"} />
+        <Modal.Modal {...props}>
+            <Modal.Icon name={"cellphone-check"} />
 
-            <ModalTitle hasIconAbove={true}>
+            <Modal.Title hasIconAbove={true}>
                 Complete modal
-            </ModalTitle>
+            </Modal.Title>
 
-            <ModalDescription>
+            <Modal.Description>
                 This is a complete modal.
                 It has an icon, title, description and the actions section
                 with one "Ok" button.
-            </ModalDescription>
+            </Modal.Description>
 
-            <ModalActions>
-                <Button variant={"text"} text={"Ok"} onPress={props.onRequestClose} />
-            </ModalActions>
-        </Modal>
+            <Modal.Actions>
+                <Button
+                    mode={"text"}
+                    children={"Ok"}
+                    onPress={props.onRequestClose}
+                />
+            </Modal.Actions>
+        </Modal.Modal>
     )
 }

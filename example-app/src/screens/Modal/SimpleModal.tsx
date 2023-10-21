@@ -1,11 +1,5 @@
-import {
-    Button,
-    Modal,
-    ModalActions,
-    ModalDescription,
-    ModalProps,
-    ModalTitle
-} from "@elementium/native"
+import { Modal, ModalProps } from "@elementium/native"
+import { Button } from "react-native-paper"
 
 
 export interface SimpleModalProps extends ModalProps {}
@@ -13,20 +7,24 @@ export interface SimpleModalProps extends ModalProps {}
 
 export function SimpleModal(props: SimpleModalProps) {
     return (
-        <Modal hasTintColor={true} {...props}>
-            <ModalTitle>
+        <Modal.Modal {...props}>
+            <Modal.Title>
                 Simple modal
-            </ModalTitle>
+            </Modal.Title>
 
-            <ModalDescription>
+            <Modal.Description>
                 This is a simple modal.
                 It has a title, description and the actions section
                 with one "Ok" button.
-            </ModalDescription>
+            </Modal.Description>
 
-            <ModalActions>
-                <Button variant={"text"} text={"Ok"} onPress={props.onRequestClose} />
-            </ModalActions>
-        </Modal>
+            <Modal.Actions>
+                <Button
+                    mode={"text"}
+                    children={"Ok"}
+                    onPress={props.onRequestClose}
+                />
+            </Modal.Actions>
+        </Modal.Modal>
     )
 }

@@ -1,5 +1,6 @@
-import { Button, Screen } from "@elementium/native"
+import { Screen } from "@elementium/native"
 import { useState } from "react"
+import { Button } from "react-native-paper"
 
 import { CompleteModal } from "./CompleteModal"
 import { ModalWithList } from "./ModalWithList"
@@ -17,17 +18,20 @@ export function ModalScreen() {
     return (
         <Screen style={{ alignItems: "center", justifyContent: "center", rowGap: 16 }}>
             <Button
-                text={"Simple Modal"}
+                mode={"contained"}
+                children={"Simple Modal"}
                 onPress={() => setIsSimpleModalVisible(true)}
             />
 
             <Button
-                text={"Complete Modal"}
+                mode={"contained"}
+                children={"Complete Modal"}
                 onPress={() => setIsCompleteModalVisible(true)}
             />
 
             <Button
-                text={"Modal with list"}
+                mode={"contained"}
+                children={"Modal with list"}
                 onPress={() => setIsModalWithListVisible(true)}
             />
 
