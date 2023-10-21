@@ -1,4 +1,5 @@
 import { Color, Prisma } from "@elementium/color"
+import { useElementiumTheme } from "@elementium/theme"
 import { useState } from "react"
 import {
     LayoutChangeEvent,
@@ -8,8 +9,6 @@ import {
     ViewStyle,
     useWindowDimensions
 } from "react-native"
-
-import { useElementiumTheme } from "../../theme"
 
 
 const MIN_WIDTH = 280

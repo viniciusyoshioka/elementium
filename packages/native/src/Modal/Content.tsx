@@ -1,7 +1,6 @@
+import { useElementiumTheme } from "@elementium/theme"
 import { ScrollView, ScrollViewProps, View, ViewStyle } from "react-native"
 import { Divider } from "react-native-paper"
-
-import { useElementiumTheme } from "../../theme"
 
 
 export interface ModalContentProps extends ScrollViewProps {

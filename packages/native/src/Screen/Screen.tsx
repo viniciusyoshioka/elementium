@@ -1,6 +1,5 @@
+import { useElementiumTheme } from "@elementium/theme"
 import { StyleSheet, View, ViewProps } from "react-native"
-
-import { useElementiumTheme } from "../../theme"
 
 
 export interface ScreenProps extends ViewProps {}

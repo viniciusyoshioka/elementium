@@ -1,7 +1,7 @@
+import { useElementiumTheme } from "@elementium/theme"
 import { StyleSheet, View } from "react-native"
 
 import { Icon, IconProps } from ".."
-import { useElementiumTheme } from "../../theme"
 
 
 export interface ModalIconProps extends IconProps {}

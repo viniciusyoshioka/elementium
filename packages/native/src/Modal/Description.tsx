@@ -1,7 +1,6 @@
+import { useElementiumTheme } from "@elementium/theme"
 import { StyleSheet, TextStyle, View } from "react-native"
 import { Text, TextProps } from "react-native-paper"
-
-import { useElementiumTheme } from "../../theme"
 
 
 export interface ModalDescriptionProps extends TextProps<"bodyMedium"> {}

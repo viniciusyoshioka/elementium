@@ -1,6 +1,6 @@
 {
-    "name": "@elementium/native",
-    "description": "Library with components to build interfaces for React Native",
+    "name": "@elementium/theme",
+    "description": "Theme library to build interfaces for React and React Native",
     "version": "0.0.1",
     "license": "MIT",
     "main": "lib/commonjs/index.js",
@@ -16,30 +16,20 @@
         "prepack": "bob build"
     },
     "peerDependencies": {
-        "@elementium/color": "^1.0.1",
-        "@elementium/theme": "^0.0.1",
-        "react": "*",
-        "react-native": "*",
-        "react-native-paper": "^5.11.0",
-        "react-native-vector-icons": "https://github.com/viniciusyoshioka/react-native-vector-icons"
+        "react": "*"
     },
     "devDependencies": {
         "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
-        "@elementium/color": "*",
         "@elementium/eslint-config": "*",
         "@elementium/eslint-config-typescript": "*",
-        "@elementium/theme": "*",
         "@types/react": "^18.0.28",
-        "@types/react-native-vector-icons": "^6.4.13",
         "@typescript-eslint/eslint-plugin": "^5.52.0",
         "@typescript-eslint/parser": "^5.52.0",
         "babel-plugin-transform-remove-console": "^6.9.4",
         "eslint": "^8.34.0",
         "metro-react-native-babel-preset": "^0.75.0",
         "react": "18.2.0",
-        "react-native": "0.71.3",
         "react-native-builder-bob": "^0.20.3",
-        "react-native-vector-icons": "https://github.com/viniciusyoshioka/react-native-vector-icons",
         "typescript": "^4.9.5"
     },
     "react-native-builder-bob": {
