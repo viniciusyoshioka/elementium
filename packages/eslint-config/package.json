@@ -1,7 +1,7 @@
 {
     "name": "@elementium/eslint-config",
     "description": "Eslint configurations for JavaScript",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "license": "MIT",
     "main": ".eslintrc.json",
     "files": [
