@@ -1,8 +1,12 @@
 # @elementium/tsconfig
 
+Typescript configuration
+
 ## Installation
 
 To install the package, download it, and then run:
+
+- Note that this package will be used only if you have `typescript` in your project
 
 ```sh
 npm install --save-dev file:../elementium/packages/tsconfig
