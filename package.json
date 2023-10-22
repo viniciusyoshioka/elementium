@@ -18,6 +18,6 @@
         "native": "yarn workspace @elementium/native",
         "theme": "yarn workspace @elementium/theme",
         "tsconfig": "yarn workspace @elementium/tsconfig",
-        "prepack": "yarn color prepack && yarn native prepack && yarn theme prepack"
+        "prepack": "yarn color prepack && yarn theme prepack && yarn native prepack"
     }
 }
