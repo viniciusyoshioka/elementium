@@ -1,5 +1,7 @@
 # @elementium/eslint-config
 
+Eslint configurations for JavaScript
+
 ## Installation
 
 To install the package, download it, and then run:

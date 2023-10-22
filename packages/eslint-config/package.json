@@ -1,6 +1,6 @@
 {
     "name": "@elementium/eslint-config",
-    "description": "Eslint config to be used with JS. (Supports React and React Native)",
+    "description": "Eslint configurations for JavaScript",
     "version": "0.0.1",
     "license": "MIT",
     "main": ".eslintrc.json",

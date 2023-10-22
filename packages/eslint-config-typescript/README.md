@@ -1,5 +1,7 @@
 # @elementium/eslint-config-typescript
 
+Eslint configurations for TypeScript
+
 ## Installation
 
 To install the package, download it, and then run:
