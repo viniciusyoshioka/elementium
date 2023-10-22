@@ -1,5 +1,3 @@
-import { ColorValue } from "react-native"
-
 import { ALL_CSS_COLORS, ColorName } from "../CssColor"
 import { RgbColorObject } from "./types"
 
@@ -18,11 +16,7 @@ export class Color {
     private a: number
 
 
-    constructor(color: ColorValue | RgbColorObject) {
-        if (typeof color === "symbol") {
-            throw new Error("Color of type OpaqueColorValue is not supported.")
-        }
-
+    constructor(color: string | RgbColorObject) {
         const { r, g, b, a } = (typeof color === "string")
             ? Color.parse(color)
             : color
