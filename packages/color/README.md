@@ -1,5 +1,7 @@
 # @elementium/color
 
+Library to manipulate colors programmatically
+
 ## Installation
 
 To install the package, download it, and then run:
