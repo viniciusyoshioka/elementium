@@ -1,3 +1,14 @@
 {
     "extends": "../../tsconfig.json",
+    "references": [],
+    "compilerOptions": {
+        "paths": {},
+    },
+    "include": [
+        "src/**/*",
+    ],
+    "exclude": [
+        "lib",
+        "node_modules",
+    ],
 }
