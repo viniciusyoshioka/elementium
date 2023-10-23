@@ -4,4 +4,14 @@
         {"path": "../color"},
         {"path": "../theme"},
     ],
+    "compilerOptions": {
+        "paths": {},
+    },
+    "include": [
+        "src/**/*",
+    ],
+    "exclude": [
+        "lib",
+        "node_modules",
+    ],
 }
