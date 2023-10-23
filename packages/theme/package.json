@@ -22,7 +22,7 @@
         "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
         "@elementium/eslint-config": "*",
         "@elementium/eslint-config-typescript": "*",
-        "@types/react": "^18.0.28",
+        "@types/react": "^18.0.24",
         "@typescript-eslint/eslint-plugin": "^6.8.0",
         "@typescript-eslint/parser": "^6.8.0",
         "babel-plugin-transform-remove-console": "^6.9.4",
