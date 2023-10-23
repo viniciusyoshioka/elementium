@@ -9,6 +9,7 @@
         ]
     },
     "scripts": {
+        "postinstall": "npx patch-package",
         "typecheck": "tsc --noEmit --composite false",
         "lint": "eslint '**/*.{js,ts,tsx}'",
         "example-app": "yarn workspace @elementium/example-app",
