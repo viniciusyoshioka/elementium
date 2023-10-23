@@ -25,13 +25,13 @@
         "@elementium/eslint-config": "*",
         "@elementium/eslint-config-typescript": "*",
         "@types/react": "^18.0.28",
-        "@typescript-eslint/eslint-plugin": "^5.52.0",
-        "@typescript-eslint/parser": "^5.52.0",
+        "@typescript-eslint/eslint-plugin": "^6.8.0",
+        "@typescript-eslint/parser": "^6.8.0",
         "babel-plugin-transform-remove-console": "^6.9.4",
-        "eslint": "^8.34.0",
+        "eslint": "^8.52.0",
         "react": "18.2.0",
-        "react-native-builder-bob": "^0.20.3",
-        "typescript": "^4.9.5"
+        "react-native-builder-bob": "^0.23.1",
+        "typescript": "^5.2.2"
     },
     "react-native-builder-bob": {
         "source": "src",
