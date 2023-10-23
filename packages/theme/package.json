@@ -1,7 +1,7 @@
 {
     "name": "@elementium/theme",
     "description": "Theme library to build interfaces for React and React Native",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "license": "MIT",
     "main": "lib/commonjs/index.js",
     "module": "lib/module/index.js",
