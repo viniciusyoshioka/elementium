@@ -51,7 +51,7 @@ export function ModalContainer(props: ModalContainerProps) {
 
     const backgroundColor = (style && style.backgroundColor) ?? color.surfaceContainerHigh
     const tintColor = hasTintColor ? color.primary : "transparent"
-    const containerBackgound = new Color(backgroundColor)
+    const containerBackgound = new Color(backgroundColor as string)
     const containerOverlay = new Color(tintColor).setA(elevation.opacityLevel3)
     const newContainerBackground = Prisma.addColors(containerBackgound, containerOverlay).toRgba()
     const containerColorStyle: ViewStyle = { backgroundColor: newContainerBackground }
