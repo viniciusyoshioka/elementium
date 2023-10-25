@@ -1,7 +1,7 @@
 {
     "name": "@elementium/color",
     "description": "Library to manipulate colors programmatically",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "license": "MIT",
     "main": "lib/commonjs/index.js",
     "module": "lib/module/index.js",
