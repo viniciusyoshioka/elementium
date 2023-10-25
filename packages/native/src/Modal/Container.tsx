@@ -1,4 +1,4 @@
-import { Color, Prisma } from "@elementium/color"
+import { Color, Prism } from "@elementium/color"
 import { useElementiumTheme } from "@elementium/theme"
 import { useState } from "react"
 import {
@@ -53,7 +53,7 @@ export function ModalContainer(props: ModalContainerProps) {
     const tintColor = hasTintColor ? color.primary : "transparent"
     const containerBackgound = new Color(backgroundColor as string)
     const containerOverlay = new Color(tintColor).setA(elevation.opacityLevel3)
-    const newContainerBackground = Prisma.addColors(containerBackgound, containerOverlay).toRgba()
+    const newContainerBackground = Prism.addColors(containerBackgound, containerOverlay).toRgba()
     const containerColorStyle: ViewStyle = { backgroundColor: newContainerBackground }
 
 

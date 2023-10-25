@@ -2,7 +2,7 @@ import { Color } from "./Color"
 import { ColorVector } from "./ColorVector"
 
 
-export class Prisma {
+export class Prism {
     static addColors(base: Color, overlay: Color): Color {
         // Formula from https://en.wikipedia.org/wiki/Alpha_compositing
 
