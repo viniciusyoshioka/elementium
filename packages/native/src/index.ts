@@ -1,5 +1,4 @@
 export * from "./Icon"
-export * from "./Input"
 export * from "./Modal"
 export * from "./Pressable"
 export * from "./Screen"
