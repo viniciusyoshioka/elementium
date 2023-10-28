@@ -11,13 +11,15 @@ export interface ModalTitleProps extends TextProps<"headlineSmall"> {
 export function ModalTitle(props: ModalTitleProps) {
 
 
+    const hasIconAbove = props.hasIconAbove ?? false
+
     const { color } = useElementiumTheme()
 
 
     const titleWithIconStyle: TextStyle = {
-        marginTop: props.hasIconAbove ? 16 : 24,
+        marginTop: hasIconAbove ? 16 : 24,
         marginHorizontal: 24,
-        textAlign: props.hasIconAbove ? "center" : undefined,
+        textAlign: hasIconAbove ? "center" : undefined,
         color: color.onSurface,
     }
 
