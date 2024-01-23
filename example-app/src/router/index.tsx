@@ -5,6 +5,7 @@ import { Pressable, StatusBar } from "react-native"
 
 import { IconScreen } from "@screens/Icon"
 import { ModalScreen } from "@screens/Modal"
+import { SortableListScreen } from "@screens/SortableLIst"
 import { useAppTheme } from "@theme"
 
 
@@ -25,6 +26,7 @@ export function Router() {
             />
 
             <Drawer.Navigator
+                initialRouteName={"Sortable list"}
                 screenOptions={{
                     headerStyle: { backgroundColor: color.background },
                     headerTintColor: color.onBackground,
@@ -49,6 +51,7 @@ export function Router() {
             >
                 <Drawer.Screen name={"Icon"} component={IconScreen} />
                 <Drawer.Screen name={"Modal"} component={ModalScreen} />
+                <Drawer.Screen name={"Sortable list"} component={SortableListScreen} />
             </Drawer.Navigator>
         </NavigationContainer>
     )

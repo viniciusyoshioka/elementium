@@ -13,9 +13,11 @@ const workspaces = fs
 
 // Get the aliases for packages `source` field in their `package.json`
 const aliases = {
+    "@components": "./src/components",
     "@hooks": "./src/hooks",
     "@router": "./src/router",
     "@screens": "./src/screens",
+    "@services": "./src/services",
     "@theme": "./src/theme",
 }
 workspaces.forEach(it => {
