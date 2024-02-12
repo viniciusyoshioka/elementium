@@ -38,6 +38,7 @@ export function ModalContent(props: ModalContentProps) {
         <Divider style={topDividerStyle} />
 
         <ScrollView
+            keyboardShouldPersistTaps={"handled"}
             showsVerticalScrollIndicator={false}
             {...props}
             style={[scrollViewStyle, props.style]}

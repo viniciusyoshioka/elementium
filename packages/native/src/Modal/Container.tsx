@@ -2,6 +2,8 @@ import { Color, Prism } from "@elementium/color"
 import { useElementiumTheme } from "@elementium/theme"
 import { useState } from "react"
 import {
+    GestureResponderEvent,
+    Keyboard,
     LayoutChangeEvent,
     StyleSheet,
     TouchableOpacity,
@@ -57,6 +59,14 @@ export function ModalContainer(props: ModalContainerProps) {
     const containerColorStyle: ViewStyle = { backgroundColor: newContainerBackground }
 
 
+    function onPress(e: GestureResponderEvent) {
+        Keyboard.dismiss()
+
+        if (props.onPress) {
+            props.onPress(e)
+        }
+    }
+
     function onLayout(e: LayoutChangeEvent) {
         if (containerHeight === undefined) {
             setContainerHeight(e.nativeEvent.layout.height)
@@ -72,6 +82,7 @@ export function ModalContainer(props: ModalContainerProps) {
         <TouchableOpacity
             activeOpacity={1}
             {...props}
+            onPress={onPress}
             onLayout={onLayout}
             style={[containerStyle, style, containerColorStyle]}
         />
