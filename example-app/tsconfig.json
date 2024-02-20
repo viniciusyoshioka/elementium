@@ -1,5 +1,8 @@
 {
-    "extends": "../tsconfig.json",
+    "extends": [
+        "@vinicius1313/tsconfig/tsconfig.json",
+        "../tsconfig.json",
+    ],
     "references": [
         {"path": "../packages/native"},
         {"path": "../packages/theme"},
