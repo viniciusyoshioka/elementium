@@ -34,7 +34,7 @@
         "@vinicius1313/tsconfig": "^1.0.0",
         "babel-plugin-module-resolver": "^5.0.0",
         "babel-plugin-transform-remove-console": "^6.9.4",
-        "eslint": "^8.52.0",
+        "eslint": "^9.26.0",
         "metro-react-native-babel-preset": "0.76.8",
         "typescript": "^5.2.2"
     },
